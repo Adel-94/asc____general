@@ -1,5 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="ascModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="admin">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="adminname" Type="varchar" MaxLength="50" />
+    <Property Name="password" Type="varchar" MaxLength="50" />
+    <Property Name="image" Type="varchar(max)" />
+  </EntityType>
   <EntityType Name="blog">
     <Key>
       <PropertyRef Name="id" />
@@ -33,8 +42,8 @@
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="sira" Type="int" Nullable="false" />
-    <Property Name="category_name" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="sira" Type="int" />
+    <Property Name="category_name" Type="varchar" MaxLength="255" />
   </EntityType>
   <EntityType Name="foods">
     <Key>
@@ -65,11 +74,9 @@
     <Property Name="name" Type="varchar" MaxLength="255" />
     <Property Name="profession" Type="varchar" MaxLength="255" />
     <Property Name="photo" Type="varchar(max)" />
-    <Property Name="text_about" Type="text" />
+    <Property Name="text_about" Type="varchar" MaxLength="255" />
     <Property Name="instagram" Type="varchar" MaxLength="255" />
     <Property Name="facebook" Type="varchar" MaxLength="255" />
-    <Property Name="phone" Type="varchar" MaxLength="255" />
-    <Property Name="email" Type="varchar(max)" />
   </EntityType>
   <EntityType Name="lettrs">
     <Key>
@@ -101,10 +108,10 @@
     <Property Name="instagram" Type="varchar(max)" />
     <Property Name="edu_or_gym" Type="bit" />
     <Property Name="photo" Type="varchar(max)" />
-    <Property Name="text" Type="varchar(max)" />
+    <Property Name="text" Type="varchar" MaxLength="255" />
     <Property Name="map_url" Type="varchar(max)" />
   </EntityType>
-  <EntityType Name="regions">
+  <EntityType Name="region">
     <Key>
       <PropertyRef Name="id" />
     </Key>
@@ -147,11 +154,11 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_our_complex_region_categories">
-    <End Role="regions" Type="Self.regions" Multiplicity="0..1" />
+  <Association Name="FK_our_complex_region">
+    <End Role="region" Type="Self.region" Multiplicity="0..1" />
     <End Role="our_complex" Type="Self.our_complex" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="regions">
+      <Principal Role="region">
         <PropertyRef Name="id" />
       </Principal>
       <Dependent Role="our_complex">
@@ -160,6 +167,7 @@
     </ReferentialConstraint>
   </Association>
   <EntityContainer Name="ascModelStoreContainer">
+    <EntitySet Name="admin" EntityType="Self.admin" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="blog" EntityType="Self.blog" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="blog_category" EntityType="Self.blog_category" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="cartoon" EntityType="Self.cartoon" Schema="dbo" store:Type="Tables" />
@@ -170,7 +178,7 @@
     <EntitySet Name="lettrs" EntityType="Self.lettrs" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="names" EntityType="Self.names" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="our_complex" EntityType="Self.our_complex" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="regions" EntityType="Self.regions" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="region" EntityType="Self.region" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK_blog_blog_category" Association="Self.FK_blog_blog_category">
       <End Role="blog_category" EntitySet="blog_category" />
       <End Role="blog" EntitySet="blog" />
@@ -183,8 +191,8 @@
       <End Role="lettrs" EntitySet="lettrs" />
       <End Role="names" EntitySet="names" />
     </AssociationSet>
-    <AssociationSet Name="FK_our_complex_region_categories" Association="Self.FK_our_complex_region_categories">
-      <End Role="regions" EntitySet="regions" />
+    <AssociationSet Name="FK_our_complex_region" Association="Self.FK_our_complex_region">
+      <End Role="region" EntitySet="region" />
       <End Role="our_complex" EntitySet="our_complex" />
     </AssociationSet>
   </EntityContainer>

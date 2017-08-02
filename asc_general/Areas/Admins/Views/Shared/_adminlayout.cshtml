@@ -7,11 +7,11 @@
     <link rel="stylesheet" href="~/Public/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="~/Public/css/mob.css">
-    
+
     <link rel="stylesheet" href="~/Public/css/bootstrap.css">
     <link rel="stylesheet" href="~/Public/css/materialize.css">
     <link rel="stylesheet" href="~/Public/css/admin.css">
-    
+
 </head>
 <body>
     <div class="container-fluid sb1">
@@ -73,7 +73,7 @@
                     </li>
                     <li class="divider"></li>
                     <li>
-                        <a href="#" class="ho-dr-con-last waves-effect"><i class="fa fa-sign-in" aria-hidden="true"></i> Logout</a>
+                       <a href="@Url.Action("Logout", "admin")"><i class="fa fa-sign-in" aria-hidden="true"></i>Logout</a> 
                     </li>
                 </ul>
             </div>
@@ -175,26 +175,34 @@
                                 </ul>
                             </div>
                         </li>
-                        <li><a href="javascript:void(0)" class="collapsible-header"><i class="fa fa-usd" aria-hidden="true"></i> Idman Novleri</a>
+                        <li>
+                            <a href="javascript:void(0)" class="collapsible-header"><i class="fa fa-usd" aria-hidden="true"></i> Idman Novleri</a>
                             <div class="collapsible-body left-sub-menu">
                                 <ul>
-                                    <li><a href="@Url.Action("Index","gym_blog")">Butun Idman novleri</a>
+                                    <li>
+                                        <a href="@Url.Action("Index","gym_blog")">Butun Idman novleri</a>
                                     </li>
-                                    <li><a href="@Url.Action("Create","gym_blog")">Idman novu elave et</a>
+                                    <li>
+                                        <a href="@Url.Action("Create","gym_blog")">Idman novu elave et</a>
                                     </li>
                                 </ul>
                             </div>
                         </li>
-                        <li><a href="javascript:void(0)" class="collapsible-header"><i class="fa fa-ticket" aria-hidden="true"></i>Bagcalar</a>
+                        <li>
+                            <a href="javascript:void(0)" class="collapsible-header"><i class="fa fa-ticket" aria-hidden="true"></i>Bagcalar</a>
                             <div class="collapsible-body left-sub-menu">
                                 <ul>
-                                    <li><a href="@Url.Action("Index","CrudEducationCategories")">Butun kateqoriyalar</a>
+                                    <li>
+                                        <a href="@Url.Action("Index","CrudEducationCategories")">Butun kateqoriyalar</a>
                                     </li>
-                                    <li><a href="@Url.Action("Index","CrudEducations")">Butun bagcalar</a>
+                                    <li>
+                                        <a href="@Url.Action("Index","CrudEducations")">Butun bagcalar</a>
                                     </li>
-                                    <li><a href="@Url.Action("Create","CrudEducationCategories")">Kateqoriya elave et</a>
+                                    <li>
+                                        <a href="@Url.Action("Create","CrudEducationCategories")">Kateqoriya elave et</a>
                                     </li>
-                                    <li><a href="@Url.Action("Create","CrudEducations")">Bagca elave et</a>
+                                    <li>
+                                        <a href="@Url.Action("Create","CrudEducations")">Bagca elave et</a>
                                     </li>
                                 </ul>
                             </div>
@@ -229,23 +237,23 @@
             </div>
 
             <!--== BODY INNER CONTAINER ==-->
-           
+
 
         </div>
     </div>
 
     <div class="sb2-2">
-     
 
-            @RenderBody()
 
-        
+        @RenderBody()
+
+
     </div>
     <script src="~/Public/js/jquery.min.js"></script>
     <script src="~/Public/js/bootstrap.min.js"></script>
     <script src="~/Public/js/materialize.min.js"></script>
     <script src="~/Public/js/admin.js"></script>
-    
+
 </body>
 
 

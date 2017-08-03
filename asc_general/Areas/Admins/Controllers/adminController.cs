@@ -47,6 +47,7 @@ namespace asc_general.Areas.Admins.Controllers
                 if (admin != null)
                 {
                     Session["admin"] = true;
+                    Session["admin"] = new admin () { adminname = adm.adminname, image=admin.image };
                     return RedirectToAction("index", "admin");
                 }
                 else

@@ -54,28 +54,25 @@
                 <!-- Dropdown Structure -->
                 <ul id='top-menu' class='dropdown-content top-menu-sty'>
                     <li>
-                        <a href="setting.html" class="waves-effect"><i class="fa fa-cogs" aria-hidden="true"></i>Admin Setting</a>
+                        <a href="@Url.Action("Index","foodsCrud")" class="waves-effect"><i class="fa fa-cogs" aria-hidden="true"></i>Qida</a>
                     </li>
                     <li>
-                        <a href="listing-all.html" class="waves-effect"><i class="fa fa-list-ul" aria-hidden="true"></i> Listings</a>
+                        <a href="@Url.Action("Index","blogsCrud")" class="waves-effect"><i class="fa fa-list-ul" aria-hidden="true"></i> Meqalələr</a>
                     </li>
                     <li>
-                        <a href="hotel-all.html" class="waves-effect"><i class="fa fa-building-o" aria-hidden="true"></i> Hotels</a>
+                        <a href="@Url.Action("Index","cartoonsCrud")" class="waves-effect"><i class="fa fa-building-o" aria-hidden="true"></i> Cizgi filmləri</a>
                     </li>
                     <li>
-                        <a href="package-all.html" class="waves-effect"><i class="fa fa-umbrella" aria-hidden="true"></i> Tour Packages</a>
+                        <a href="@Url.Action("Index","our_complex_Crud")" class="waves-effect"><i class="fa fa-umbrella" aria-hidden="true"></i> Komplekslər</a>
                     </li>
                     <li>
-                        <a href="event-all.html" class="waves-effect"><i class="fa fa-flag-checkered" aria-hidden="true"></i> Events</a>
+                        <a href="@Url.Action("Index","Health_Staff_Crud")" class="waves-effect"><i class="fa fa-flag-checkered" aria-hidden="true"></i> Həkim heyəti</a>
                     </li>
                     <li>
-                        <a href="offers.html" class="waves-effect"><i class="fa fa-tags" aria-hidden="true"></i> Offers</a>
+                        <a href="@Url.Action("Index","gym_blog")" class="waves-effect"><i class="fa fa-tags" aria-hidden="true"></i> İdman növləri</a>
                     </li>
                     <li>
-                        <a href="user-add.html" class="waves-effect"><i class="fa fa-user-plus" aria-hidden="true"></i> Add New User</a>
-                    </li>
-                    <li>
-                        <a href="#" class="waves-effect"><i class="fa fa-undo" aria-hidden="true"></i> Backup Data</a>
+                        <a href="@Url.Action("Index","CrudNames")" class="waves-effect"><i class="fa fa-user-plus" aria-hidden="true"></i> Uşaq adları</a>
                     </li>
                     <li class="divider"></li>
                     <li>
@@ -156,14 +153,20 @@
                             </div>
                         </li>
                         <li>
-                            <a href="javascript:void(0)" class="collapsible-header"><i class="fa fa-picture-o" aria-hidden="true"></i> Idman Kompleksleri</a>
+                            <a href="javascript:void(0)" class="collapsible-header"><i class="fa fa-picture-o" aria-hidden="true"></i>  Komplekslər</a>
                             <div class="collapsible-body left-sub-menu">
                                 <ul>
                                     <li>
-                                        <a href="@Url.Action("Index","idman_kompp")">Butun Idman Kompleksleri</a>
+                                        <a href="@Url.Action("Index","regions_Crud")">Butun regionlar</a>
                                     </li>
                                     <li>
-                                        <a href="@Url.Action("Create","idman_kompp")">Idman kompleksi elave et</a>
+                                        <a href="@Url.Action("Index","our_complex_Crud")">Butun komplekslər</a>
+                                    </li>
+                                    <li>
+                                        <a href="@Url.Action("Create","regions_Crud")">Region  əlavə et</a>
+                                    </li>
+                                    <li>
+                                        <a href="@Url.Action("Create","our_complex_Crud")">Kompleks əlavə et</a>
                                     </li>
                                 </ul>
                             </div>
@@ -194,50 +197,32 @@
                                 </ul>
                             </div>
                         </li>
-                        <li>
-                            <a href="javascript:void(0)" class="collapsible-header"><i class="fa fa-ticket" aria-hidden="true"></i>Bagcalar</a>
-                            <div class="collapsible-body left-sub-menu">
-                                <ul>
-                                    <li>
-                                        <a href="@Url.Action("Index","CrudEducationCategories")">Butun kateqoriyalar</a>
-                                    </li>
-                                    <li>
-                                        <a href="@Url.Action("Index","CrudEducations")">Butun bagcalar</a>
-                                    </li>
-                                    <li>
-                                        <a href="@Url.Action("Create","CrudEducationCategories")">Kateqoriya elave et</a>
-                                    </li>
-                                    <li>
-                                        <a href="@Url.Action("Create","CrudEducations")">Bagca elave et</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
+                
                         <li>
                             <a href="javascript:void(0)" class="collapsible-header"><i class="fa fa-rss" aria-hidden="true"></i> Usaq Adlari</a>
                             <div class="collapsible-body left-sub-menu">
                                 <ul>
                                     <li>
-                                        <a href="@Url.Action("Index","Letters")">Butun herfler</a>
+                                        <a href="@Url.Action("Index","CrudLettrs")">Butun herfler</a>
                                     </li>
                                     <li>
-                                        <a href="@Url.Action("Index","Names")">Butun Adlar</a>
+                                        <a href="@Url.Action("Index","CrudNames")">Butun Adlar</a>
                                     </li>
                                     <li>
-                                        <a href="@Url.Action("Create","Letters")">Herf elave et</a>
+                                        <a href="@Url.Action("Create","CrudLettrs")">Herf elave et</a>
                                     </li>
                                     <li>
-                                        <a href="@Url.Action("Create","Names")">Ad elave et</a>
+                                        <a href="@Url.Action("Create","CrudNames")">Ad elave et</a>
                                     </li>
                                 </ul>
                             </div>
                         </li>
-                        <li>
+                        @*<li>
                             <a href="social-media.html"><i class="fa fa-plus-square-o" aria-hidden="true"></i> Social Media</a>
                         </li>
                         <li>
                             <a href="login.html" target="_blank"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</a>
-                        </li>
+                        </li>*@
                     </ul>
                 </div>
             </div>

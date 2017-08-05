@@ -183,6 +183,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LettersController.cs" />
     <Compile Include="Controllers\NamesController.cs" />
+    <Compile Include="Controllers\ReceptsController.cs" />
     <Compile Include="Controllers\SIngleBlogController.cs" />
     <Compile Include="Controllers\userController.cs" />
     <Compile Include="Global.asax.cs">
@@ -442,7 +443,9 @@
     <Content Include="Public\css\foodHut_responsive.css" />
     <Content Include="Public\css\foodHut_style.css" />
     <Content Include="Public\css\health.css" />
+    <Content Include="Public\css\healthblog.css" />
     <Content Include="Public\css\idman.css" />
+    <Content Include="Public\css\idmanblog.css" />
     <Content Include="Public\css\layerslider.css" />
     <Content Include="Public\css\lightbox.min.css" />
     <Content Include="Public\css\login.css" />
@@ -455,6 +458,7 @@
     <Content Include="Public\css\owl.carousel.min.css" />
     <Content Include="Public\css\pageloader.css" />
     <Content Include="Public\css\prettyPhoto.css" />
+    <Content Include="Public\css\recept.css" />
     <Content Include="Public\css\register.css" />
     <Content Include="Public\css\responsive.css" />
     <Content Include="Public\css\search.css" />
@@ -463,6 +467,7 @@
     <Content Include="Public\css\slick.css" />
     <Content Include="Public\css\stylel.css" />
     <Content Include="Public\css\tehsil.css" />
+    <Content Include="Public\css\tehsilblog.css" />
     <Content Include="Public\css\themify-icons.css" />
     <Content Include="Public\css\VideoPopUp.css" />
     <Content Include="Public\favicon.ico" />
@@ -1428,69 +1433,6 @@
     <Content Include="Uploads\20178223855201773115816board.jpg" />
     <Content Include="Uploads\2017822389201773115726alma.jpg" />
     <Content Include="Uploads\2017823233120177243172class2.jpg" />
-    <Content Include="Views\Complex\Uploads\20177231942316145549_1211799138906412_1577592306_o.jpg" />
-    <Content Include="Views\Complex\Uploads\2017724133011trainer1.jpg" />
-    <Content Include="Views\Complex\Uploads\201772414159blog_img5.jpg" />
-    <Content Include="Views\Complex\Uploads\2017724171257trainer1.jpg" />
-    <Content Include="Views\Complex\Uploads\201772417135add_bg.png" />
-    <Content Include="Views\Complex\Uploads\2017724172640activity4.jpg" />
-    <Content Include="Views\Complex\Uploads\20177241752class6.jpg" />
-    <Content Include="Views\Complex\Uploads\201772431546class1.jpg" />
-    <Content Include="Views\Complex\Uploads\20177243172class2.jpg" />
-    <Content Include="Views\Complex\Uploads\201772431743class3.jpg" />
-    <Content Include="Views\Complex\Uploads\201772431840class4.jpg" />
-    <Content Include="Views\Complex\Uploads\201772431938author-hexa-bg.png" />
-    <Content Include="Views\Complex\Uploads\201772504021br6.jpg" />
-    <Content Include="Views\Complex\Uploads\201772504223br6.jpg" />
-    <Content Include="Views\Complex\Uploads\20177250422br6.jpg" />
-    <Content Include="Views\Complex\Uploads\201772504235br6.jpg" />
-    <Content Include="Views\Complex\Uploads\201772504248br6.jpg" />
-    <Content Include="Views\Complex\Uploads\201772504259br6.jpg" />
-    <Content Include="Views\Complex\Uploads\201772504424dn1.jpg" />
-    <Content Include="Views\Complex\Uploads\201772504445dn1.jpg" />
-    <Content Include="Views\Complex\Uploads\201772504520dn1.jpg" />
-    <Content Include="Views\Complex\Uploads\20177250456dn1.jpg" />
-    <Content Include="Views\Complex\Uploads\201772504719dn1.jpg" />
-    <Content Include="Views\Complex\Uploads\20177250471dn1.jpg" />
-    <Content Include="Views\Complex\Uploads\2017725142954trainer1.jpg" />
-    <Content Include="Views\Complex\Uploads\2017725143322trainer2.jpg" />
-    <Content Include="Views\Complex\Uploads\2017725143343trainer3.jpg" />
-    <Content Include="Views\Complex\Uploads\201772514349trainer4.jpg" />
-    <Content Include="Views\Complex\Uploads\2017725145848team1.jpg" />
-    <Content Include="Views\Complex\Uploads\2017725145952team2.jpg" />
-    <Content Include="Views\Complex\Uploads\201772515037team3.jpg" />
-    <Content Include="Views\Complex\Uploads\201772515118team4.jpg" />
-    <Content Include="Views\Complex\Uploads\20177251687mashabear.jpg" />
-    <Content Include="Views\Complex\Uploads\201772522015br1.jpg" />
-    <Content Include="Views\Complex\Uploads\201772522037br2.jpg" />
-    <Content Include="Views\Complex\Uploads\201772522643br1.jpg" />
-    <Content Include="Views\Complex\Uploads\201772522710br1.jpg" />
-    <Content Include="Views\Complex\Uploads\201772522731br1.jpg" />
-    <Content Include="Views\Complex\Uploads\201772522744br1.jpg" />
-    <Content Include="Views\Complex\Uploads\20177252281br1.jpg" />
-    <Content Include="Views\Complex\Uploads\201772523323dr1.jpg" />
-    <Content Include="Views\Complex\Uploads\201772523334dr1.jpg" />
-    <Content Include="Views\Complex\Uploads\201772523347dr1.jpg" />
-    <Content Include="Views\Complex\Uploads\201772523359dr1.jpg" />
-    <Content Include="Views\Complex\Uploads\20177252335dr1.jpg" />
-    <Content Include="Views\Complex\Uploads\201772523410dr1.jpg" />
-    <Content Include="Views\Complex\Uploads\201772605923image1.jpg" />
-    <Content Include="Views\Complex\Uploads\201772611030image4.jpg" />
-    <Content Include="Views\Complex\Uploads\201772611111image5.jpg" />
-    <Content Include="Views\Complex\Uploads\20177261158image2.jpg" />
-    <Content Include="Views\Complex\Uploads\2017726152028e.png" />
-    <Content Include="Views\Complex\Uploads\2017726163040download.jpg" />
-    <Content Include="Views\Complex\Uploads\2017726191516download.jpg" />
-    <Content Include="Views\Complex\Uploads\20177261920181600x1000.png" />
-    <Content Include="Views\Complex\Uploads\20177261948image3.jpg" />
-    <Content Include="Views\Complex\Uploads\201772622133blog_img1.jpg" />
-    <Content Include="Views\Complex\Uploads\201772622333class4.jpg" />
-    <Content Include="Views\Complex\Uploads\201772622532activity3.jpg" />
-    <Content Include="Views\Complex\Uploads\201772622552blog_img3.jpg" />
-    <Content Include="Views\Complex\Uploads\201772625230image5.jpg" />
-    <Content Include="Views\Complex\Uploads\20177262530image1.jpg" />
-    <Content Include="Views\Complex\Uploads\201772625311image3.jpg" />
-    <Content Include="Views\Complex\Uploads\201772625412portfolio_detail1.jpg" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -1498,7 +1440,6 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="Views\Complex\Uploads\Thumbs.db" />
     <Content Include="Views\Cartoon\Index.cshtml" />
     <Content Include="Views\cartoon_blog\Index.cshtml" />
     <Content Include="Views\Education\Index.cshtml" />
@@ -1525,6 +1466,7 @@
     <Content Include="Views\user\Index.cshtml" />
     <Content Include="Views\user\Login.cshtml" />
     <Content Include="Views\Shared\_userLayout.cshtml" />
+    <Content Include="Views\Recepts\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

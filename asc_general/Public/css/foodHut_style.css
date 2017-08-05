@@ -55,7 +55,7 @@ body {
     text-overflow:ellipsis;
 }
 img {
-    width: 100%;
+    /*width: 100%;*/
     height: auto;
 }
 
@@ -674,8 +674,7 @@ a {
 /*--------------------------------*/
 
 /* Slider Start */
-.main-container {
-}
+
 /* Fade Effect start */
 .carousel-fade .carousel-inner .item {
   opacity: 0.6;
@@ -806,12 +805,7 @@ a {
 /*--------------------------------*/
 /*  5. Our Menu Area
 /*--------------------------------*/
-.our-menu {
 
-}
-.bd-tab-menu {
-    
-}
 .bd-tab-menu .nav-tabs>li.active>a, 
 .bd-tab-menu .nav-tabs>li.active>a:focus, 
 .bd-tab-menu .nav-tabs>li.active>a:hover {

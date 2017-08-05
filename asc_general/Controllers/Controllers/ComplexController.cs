@@ -24,9 +24,9 @@ namespace asc_general.Controllers.Controllers
             our_complex complex_id = db.our_complex.Find(id);
             mymodel.complexId = complex_id;
             mymodel.regions = db.regions.ToList();
-            mymodel.next = db.our_complex.FirstOrDefault(n => n.id > complex_id.id);
-            mymodel.prev = db.our_complex.FirstOrDefault(p => p.id < complex_id.id);
+            mymodel.next = db.our_complex.FirstOrDefault(n => n.id > complex_id.id && n.region_id == complex_id.region_id);
+            mymodel.prev = db.our_complex.OrderByDescending(x => x.id).FirstOrDefault(p => p.id < complex_id.id && p.region_id == complex_id.region_id);
             return View(mymodel);
-        }
+        } 
     }
 }

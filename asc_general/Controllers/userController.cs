@@ -18,14 +18,6 @@ namespace asc_general.Controllers
         
             if (Session["user"] != null)
             {
-                //if (id == null)
-                //{
-                //    return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-                //}
-                //dynamic mymodel = new ExpandoObject();
-                //user  user_id = db.users.Find(id);
-                //mymodel.userID = user_id;
-                //mymodel.user  = db.users.ToList();
                 return View();
                 
             }

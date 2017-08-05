@@ -1,0 +1,84 @@
+﻿@using asc_general.Models
+@model dynamic
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section receptCss {
+
+    <link rel="stylesheet" href="~/Public/css/food.css">
+    <link rel="stylesheet" href="~/Public/css/recept.css">
+
+}
+
+<div id="warpper-blog clearfix" class="warpper-blog section">
+    <div class="container">
+        <div class="row">
+            <!-- Strat Left Blog sidber -->
+            <div class="col-sm-12 col-md-8">
+                <div class="blog-warpper margin-bottom-30">
+                    <article class="inner-blog">
+                        <figure class="margin-bottom-30 image">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <img class="img-responsive" src="~/Uploads/@Model.foodId.photo" alt="Recept Image">
+                                </div>
+                                <div class="col-md-6">
+                                </div>
+                            </div>
+                          
+                        </figure>
+                        <h2 class="post-title color-flamingo"><a href="#">@Model.foodId.name</a></h2>
+                        <div class="lower-part">
+                            <div class="post-text">
+                                <p> @Model.foodId.text</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <div class="text-center prevnext">
+                        @if (Model.prev != null)
+                        {
+
+                            <a href="@Url.Action("index","recepts",new { id = Model.prev.id })"><i class="fa fa-angle-double-left" aria-hidden="true"></i>Öncə</a>
+                        }
+                        @if (Model.next != null)
+                        {
+
+                            <a href="@Url.Action("index","recepts",new { id = Model.next.id })">Sonra <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                        }
+                    </div>
+
+                    <!-- End Article -->
+                </div>
+            </div><!-- End Left Left Sidber -->
+            <!--  Strat Blog Right Sidber -->
+            <div class="col-sm-12 col-md-4">
+                <div class="blog-sidber">
+                    <div class="clearfix"></div>
+                    <!-- End Search Form-->
+                    <div class="recent-post">
+                        <div class="sections">
+                            <h2>Diger Meqaleler</h2>
+                        </div>
+                        <ul class="recent-post-list list-inline">
+                            @foreach (food_categories f in Model.categories)
+                            {
+                                <li>
+                                    <a href="@Url.Action("index","recepts",new { id = f.id })"><h3>@f.category_name</h3> <p> (@f.foods.Count) </p> </a>
+                                </li>
+                            }
+                        </ul>
+                    </div>
+                    <div class="clearfix"></div>
+                    <!-- End Recent Post -->
+
+
+                </div>
+            </div><!-- End Left Left Sidber -->
+        </div><!-- End Row -->
+    </div>
+</div>
+

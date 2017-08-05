@@ -55,7 +55,7 @@ body {
     text-overflow:ellipsis;
 }
 img {
-    width: 100%;
+    /*width: 100%;*/
     height: auto;
 }
 
@@ -72,8 +72,8 @@ p {
 
 a {
     color: #f32a2a;
-    outline: none !important;
-    text-decoration: none !important;
+    outline: none!important;
+    text-decoration: none!important;
 }
 
 .display-in {
@@ -208,10 +208,10 @@ a {
     color: #dddddd !important;
 }
 :-ms-input-placeholder {
-    color: #dddddd !important;
+    color: #dddddd!important;
 }
 :-moz-placeholder {
-    color: #dddddd !important;
+    color: #dddddd!important;
 }
 
 
@@ -235,7 +235,7 @@ a {
 }
 
 .section{
-    padding: 100px 0px;
+    padding: 100px 0;
     position: relative;
     display: block;
     overflow: hidden;
@@ -612,15 +612,15 @@ a {
     color: #ffffff;
     border-radius: 0px 22px 22px 0px;
     -webkit-border-radius: 0px 22px 22px 0px;
-    -ms-border-radius: 0px 22px 22px 0px;
-    -o-border-radius: 0px 22px 22px 0px;
+    /*-ms-border-radius: 0px 22px 22px 0px;
+    -o-border-radius: 0px 22px 22px 0px;*/
     -moz-border-radius: 0px 22px 22px 0px;
     border-left: 1px solid transparent;
     background-color: #ef4836;
     transition: all 500ms ease;
     -moz-transition: all 500ms ease;
     -webkit-transition: all 500ms ease;
-    -ms-transition: all 500ms ease;
+    /*-ms-transition: all 500ms ease;*/
     -o-transition: all 500ms ease;
 }
 
@@ -636,7 +636,7 @@ a {
     background: rgba(243, 42, 42, 0.7);
     -webkit-transition: all 400ms ease-in-out;
     -moz-transition: all 400ms ease-in-out;
-    -ms-transition: all 400ms ease-in-out;
+    /*-ms-transition: all 400ms ease-in-out;*/
     -o-transition: all 400ms ease-in-out;
     transition: all 400ms ease-in-out;
 }
@@ -675,8 +675,8 @@ a {
 /*--------------------------------*/
 
 /* Slider Start */
-.main-container {
-}
+/*.main-container {
+}*/
 /* Fade Effect start */
 .carousel-fade .carousel-inner .item {
   opacity: 0.6;
@@ -788,7 +788,7 @@ a {
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
-    -ms-transition: all 0.3s ease-in-out;
+    /*-ms-transition: all 0.3s ease-in-out;*/
     transition: all 0.3s ease-in-out;
 }
 .carousel-caption .btn:hover {
@@ -797,7 +797,7 @@ a {
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
-    -ms-transition: all 0.3s ease-in-out;
+    /*-ms-transition: all 0.3s ease-in-out;*/
     transition: all 0.3s ease-in-out;
 }
 
@@ -828,9 +828,9 @@ a {
 .our-menu {
     clear:both;
 }
-.bd-tab-menu {
+/*.bd-tab-menu {
     
-}
+}*/
 .bd-tab-menu .nav-tabs>li.active>a, 
 .bd-tab-menu .nav-tabs>li.active>a:focus, 
 .bd-tab-menu .nav-tabs>li.active>a:hover {
@@ -899,7 +899,7 @@ a {
     -webkit-transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
     -o-transition: all 0.5s ease-in-out;
-    -ms-transition: all 0.5s ease-in-out;
+    /*-ms-transition: all 0.5s ease-in-out;*/
     transition: all 0.5s ease-in-out;
 }
 .bd-item-col:hover .bd-food-details {
@@ -908,7 +908,7 @@ a {
     -webkit-transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
     -o-transition: all 0.5s ease-in-out;
-    -ms-transition: all 0.5s ease-in-out;
+    /*-ms-transition: all 0.5s ease-in-out;*/
     transition: all 0.5s ease-in-out;
 }
 .bd-food-details h3 {
@@ -973,7 +973,7 @@ a {
     width: 100%;
 }
 .red-top-dashed{
-        border-bottom: 5px dashed #f32a2a;;
+        border-bottom: 5px dashed #f32a2a;
         margin-bottom: 50px;
 }
 .red-bottom-dashed {
@@ -1170,20 +1170,21 @@ a {
 /*  13. Blog Area
 /*--------------------------------*/
 .blog .blog-area {
-    display: -webkit-flex;
+    /*display: -webkit-flex;*/
     display: flex;
     -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
-    -webkit-justify-content: center;
+    /*-webkit-justify-content: center;*/
     justify-content: center;
     width: 100%;
     margin: 0 auto;
 }
 
 .blog .blog-post {
-    border-radius: 5%;
-    background:#fff none repeat scroll 0% 0%;
+    border-radius:5%;
+    background: #fff none repeat scroll 0% 0%;
     box-shadow: 0px 1px 2px #b1b1b1;
+    overflow:hidden;
 }
 
 .blog .blog-box .blog-post .image .overly {
@@ -1194,11 +1195,12 @@ a {
     background-clip: padding-box;
     border: 10px solid transparent;
     transform: translateY(100%);
-
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
 .blog .blog-box .blog-post .image {
-    border-top-left-radius: 5%;
-    border-top-right-radius: 5%;
+    border-top-left-radius:20px;
+    border-top-right-radius: 20px;
 }
 
 .blog .blog-box .blog-post .image:hover .overly {
@@ -1278,7 +1280,7 @@ a {
     text-transform: uppercase;
     -webkit-transition: all 500ms ease-in;
     -moz-transition: all 500ms ease-in;
-    -ms-transition: all 500ms ease-in;
+    /*-ms-transition: all 500ms ease-in;*/
     -o-transition: all 500ms ease-in;
     transition: all 500ms ease-in;
     cursor: pointer;
@@ -1435,8 +1437,8 @@ a {
     border-radius: 0px;
     -webkit-border-radius: 0px;
     -moz-border-radius: 0px;
-    -ms-border-radius: 0px;
-    -o-border-radius: 0px;
+    /*-ms-border-radius: 0px;
+    -o-border-radius: 0px;*/
     padding: 3px 15px;
 }
 
@@ -1459,8 +1461,8 @@ a {
     border-radius: 0px;
     -webkit-border-radius: 0px;
     -moz-border-radius: 0px;
-    -ms-border-radius: 0px;
-    -o-border-radius: 0px;
+    /*-ms-border-radius: 0px;
+    -o-border-radius: 0px;*/
     color: #9a9b9a;
 }
 
@@ -1468,13 +1470,13 @@ a {
     border-radius: 0px;
     -webkit-border-radius: 0px;
     -moz-border-radius: 0px;
-    -ms-border-radius: 0px;
-    -o-border-radius: 0px;
+    /*-ms-border-radius: 0px;
+    -o-border-radius: 0px;*/
     box-shadow: none;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
-    -ms-box-shadow: none;
-    -o-box-shadow: none;
+    /*-ms-box-shadow: none;
+    -o-box-shadow: none;*/
     height: 50px;
     border: 1px solid #d0d0d0;
     font-size: 15px;
@@ -1486,8 +1488,8 @@ a {
     border-radius: 0px;
     -webkit-border-radius: 0px;
     -moz-border-radius: 0px;
-    -ms-border-radius: 0px;
-    -o-border-radius: 0px;
+    /*-ms-border-radius: 0px;
+    -o-border-radius: 0px;*/
     font-size: 15px;
     height: auto;
     resize: none;
@@ -1500,8 +1502,8 @@ a {
     outline: 0;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
-    -ms-box-shadow: none;
-    -o-box-shadow: none;
+    /*-ms-box-shadow: none;
+    -o-box-shadow: none;*/
     box-shadow: none;
 }
 
@@ -1510,13 +1512,13 @@ a {
     border-radius: 0px;
     -webkit-border-radius: 0px;
     -moz-border-radius: 0px;
-    -ms-border-radius: 0px;
-    -o-border-radius: 0px;
+    /*-ms-border-radius: 0px;
+    -o-border-radius: 0px;*/
     box-shadow: none;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
-    -ms-box-shadow: none;
-    -o-box-shadow: none;
+    /*-ms-box-shadow: none;
+    -o-box-shadow: none;*/
     color: #535353;
     font-size: 15px;
     height: 45px;
@@ -1529,8 +1531,8 @@ a {
     border-radius: 0px;
     -webkit-border-radius: 0px;
     -moz-border-radius: 0px;
-    -ms-border-radius: 0px;
-    -o-border-radius: 0px;
+    /*-ms-border-radius: 0px;
+    -o-border-radius: 0px;*/
     color: #fff;
     font-size: 18px;
     position: absolute;
@@ -1639,13 +1641,11 @@ a {
     border-radius: 0px;
     -webkit-border-radius: 0px;
     -moz-border-radius: 0px;
-    -ms-border-radius: 0px;
-    -o-border-radius: 0px;
     box-shadow: none !important;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
-    -ms-box-shadow: none;
-    -o-box-shadow: none;
+    /*-ms-box-shadow: none;
+    -o-box-shadow: none;*/
     color: #ffffff;
     display: inline-block;
     height: 36px;
@@ -1729,8 +1729,8 @@ a {
     border-radius: 30px;
     -webkit-border-radius: 30px;
     -moz-border-radius: 30px;
-    -ms-border-radius: 30px;
-    -o-border-radius: 30px;
+    /*-ms-border-radius: 30px;
+    -o-border-radius: 30px;*/
     bottom: 20px;
     cursor: pointer;
     color: #fff;
@@ -1776,10 +1776,11 @@ a {
     position: relative;
 }
  }
-   @media only screen and (max-width: 768px) {
-.bd-food-details {
-    top: 513px;
-    height: 392px;
+@media only screen and (max-width: 768px) {
+    .bd-food-details {
+        top: 513px;
+        height: 392px;
+    }
 }
 
 

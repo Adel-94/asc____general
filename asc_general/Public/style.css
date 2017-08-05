@@ -378,8 +378,10 @@ header ul.dt-sc-social-icons li a.gplus span{border-color:#d53e2b; background:#d
 
 .menu-item-widget-area-container .widget .entry-details{border-top:2px solid #ebebeb; padding-top:15px;}
 
-.menu-item-widget-area-container .widget .entry-details .entry-title h5{margin-bottom:10px;}
+.menu-item-widget-area-container .widget .entry-details .entry-title h5{margin-bottom:10px;  }
 
+
+.menu-item-widget-area-container .widget .entry-details .entry-title h3 a {   margin-top: 26px;}
 .menu-item-widget-area-container .widget .entry-details .entry-title h5 a{color:#343434;}
 
 .menu-item-widget-area-container .widget .entry-details p{display:inline-block; float:left; clear:none; background:none; margin:0px; line-height:inherit; padding:0px;}

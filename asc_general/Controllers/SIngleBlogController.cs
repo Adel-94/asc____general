@@ -24,7 +24,7 @@ namespace asc_general.Controllers
             blog blg = db.blogs.Find(id);
             mymodel.myblog = db.blogs.ToList();
             mymodel.Blog = blg;
-            mymodel.otherblogs = db.blogs.Where( o=> o.id != id && o.category_id == blg.category_id ).Take(3).ToList();
+            mymodel.otherblogs = db.blogs.Where( o=> o.id != id && o.category_id == blg.category_id ).ToList();
             return View(mymodel);
         }
     }

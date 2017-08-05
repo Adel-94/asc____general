@@ -104,7 +104,7 @@
                                             <div class="bd-food-image" style="width:350px;height:240px">
                                                 <img src="~/Uploads/@f.photo" alt=""   style="width:350px;height:240px">
                                                 <div class="bd-food-details">
-                                                    <a href="#">
+                                                    <a href="@Url.Action("index","recepts",new {id = f.id})">
                                                         <h3> @f.name</h3>
                                                          <i class="fa fa-link" aria-hidden="true"></i>
                                                     </a>

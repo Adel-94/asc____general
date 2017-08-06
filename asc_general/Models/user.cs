@@ -28,6 +28,8 @@ public partial class user
 
     public string image { get; set; }
 
+    public string password1 { get; set; }
+
 }
 
 }

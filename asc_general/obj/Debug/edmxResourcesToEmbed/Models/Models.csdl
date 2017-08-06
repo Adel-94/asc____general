@@ -216,5 +216,6 @@
     <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
     <Property Name="image" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="password1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
   </EntityType>
 </Schema>

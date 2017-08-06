@@ -136,6 +136,7 @@
     <EntitySetMapping Name="users">
       <EntityTypeMapping TypeName="ascModel.user">
         <MappingFragment StoreEntitySet="user">
+          <ScalarProperty Name="password1" ColumnName="password1" />
           <ScalarProperty Name="image" ColumnName="image" />
           <ScalarProperty Name="email" ColumnName="email" />
           <ScalarProperty Name="password" ColumnName="password" />

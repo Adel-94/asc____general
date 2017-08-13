@@ -88,13 +88,13 @@
             <div id="filter-masonry" class="gallery-masonry section-padding-top">
                 @foreach (our_complex comp in Model.complex)
                 {                    
-                    <div class="masonry-grid col-sm-4 col-xs-6 @comp.region_id r-full-width">
+                    <div class="masonry-grid col-md-3 col-xs-6 @comp.region_id r-full-width" style="margin-bottom:20px">
                         <figure class="gallery-figure">
-                            <img src="~/Uploads/@comp.photo" alt="@comp.complex_name">
+                            <img class="img-responsive" style="height:190px; " src="~/Uploads/@comp.photo" alt="@comp.complex_name">
                             <figcaption class="gallery-hover">
                                 <div class="tc-display-table">
                                     <div class="tc-display-table-cell">
-                                        <a class="fa fa-link"  href="@Url.Action("index","complex",new { id = comp.id})"> <h2 style="color:#ffce72;">@comp.complex_name </h2>  </a>
+                                        <a class="fa fa-link" href="@Url.Action("index","complex",new { id = comp.id,regionID = comp.region_id})"></a>
                                     </div>
                                 </div>
                             </figcaption>

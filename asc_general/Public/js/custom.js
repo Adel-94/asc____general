@@ -1,5 +1,5 @@
 jQuery(document).ready(function($){
-	
+
 	"use strict";	
 	
 		$('.qtyplus').click(function(e){

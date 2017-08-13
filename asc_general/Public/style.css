@@ -20,7 +20,21 @@
 10.0 - Sidebar Styles
 11.0 - Footer Styles
 --------------------------------------------------------------*/
+@font-face {
+    font-family: ALBOROTO;
+    src: url('~/Public/fonts/ALBOROTO.otf');
+}
 
+
+
+@font-face {
+    font-family: 'Fry Pro';
+    src: url('~/Public/fonts/FryPro.otf');
+}
+@font-face {
+    font-family: 'Cocomat';
+    src: url('~/Cocomat Ultralight.otf');
+}
 
 /*--------------------------------------------------------------
 1.0 - General Styles
@@ -30,7 +44,20 @@
 
 ::selection{background-color:#008c99; color:#FFFFFF;}
 
-body{background:#f0f3f3; color:#5c5c5c; margin:0px; padding:0px; font-family:'Lato', sans-serif; font-size:14px; line-height:22px;}
+body {
+    background: #f0f3f3;
+    color: #5c5c5c;
+    margin: 0px;
+    padding: 0px;
+    font-size: 14px;
+    line-height: 22px;
+}
+    body h1, body h2, body h3, body h4, body h5, body h6 {
+        font-family: 'Fry Pro', sans-serif;
+        color: #646a82;
+        margin: 0 0 20px;
+    }
+
 
 .container{width:1170px; margin:0 auto;}
 
@@ -136,7 +163,7 @@ input.error, textarea.error{padding:15px 18px; border:1px solid #FF0000;}
 
 #main-menu .megamenu-child-container .widget ul.product_list_widget li a, #main-menu .megamenu-child-container .widget ul.product_list_widget li span.amount{font-family:'Open Sans', sans-serif;}
 
-h1, h2, h3, h4, h5, h6, .dt-sc-ico-content h4 a, .dt-sc-ico-content.type2 h4 a, .entry-title h3, .dt-sc-team h4, h3.widgettitle, .dt-sc-music-audio h5 a, input[type=text], input[type=email], textarea, .breadcrumb-section h1, .activity h4, .megamenu-child-container > ul.sub-menu > li > a{font-family:'Bubblegum Sans', cursive; font-weight:normal;}
+h1, h2, h3, h4, h5, h6, .dt-sc-ico-content h4 a, .dt-sc-ico-content.type2 h4 a, .entry-title h3, .dt-sc-team h4, h3.widgettitle, .dt-sc-music-audio h5 a, input[type=text], input[type=email], textarea, .breadcrumb-section h1, .activity h4, .megamenu-child-container > ul.sub-menu > li > a{font-family:'Fry Pro'; font-weight:normal;}
 
 footer .widget.widget_text ul li:before, .portfolio-detail p:before, h5.dt-sc-toggle-accordion:before, h5.dt-sc-toggle:before, .entry-meta .entry_format, .dt-sc-error-box:before, .dt-sc-warning-box:before, .dt-sc-success-box:before, .dt-sc-info-box:before, .dt-sc-toggle-frame h5 a:before, .dt-sc-toggle-frame h5 a:after, .dt-sc-toggle-frame-set .dt-sc-toggle-frame h5.dt-sc-toggle-accordion:after, .dt-sc-toggle-frame-set .dt-sc-toggle-frame h5.dt-sc-toggle:after, ul.dt-sc-fancy-list li:before, header ul.dt-sc-social-icons li a:before{font-family:FontAwesome; font-style:normal; font-weight:normal;}
 
@@ -173,7 +200,12 @@ header{width:100%; float:left; margin:0px; padding:0px;background:  -webkit-line
 
 .logo img{display:block;}
 
-header .login-details{float:right; margin:63px 0px 0px; padding:0px;}
+header .login-details {
+    float: right;
+    margin-bottom: 16px;
+    padding: 0px;
+    margin-top: 40px;
+}
 
 header ul.dt-sc-social-icons li{display:inline; float:left; margin-right:1px;}
 
@@ -227,6 +259,18 @@ header ul.dt-sc-social-icons li a.gplus span{border-color:#d53e2b; background:#d
 /*--------------------------------------------------------------
 3.1 - Menu Styles
 --------------------------------------------------------------*/
+.myyellow {
+    color:yellow;
+}
+.myred {
+  color:red;
+}
+.mygreen {
+    color: green;
+}
+.myblue {
+    color: blue;
+}
 
 #menu-container{clear:both; float:left; width:100%; position:relative; z-index:10; box-shadow:0 4px 2px -2px #CCCCCC; -webkit-box-shadow:0 4px 2px -2px #CCCCCC; -moz-box-shadow:0 4px 2px -2px #CCCCCC; border-top:5px solid #ebebeb; background:#FFFFFF;}
 
@@ -236,7 +280,7 @@ header ul.dt-sc-social-icons li a.gplus span{border-color:#d53e2b; background:#d
 	
 #main-menu > ul.menu{margin:0px; padding:0px;}
 	
-#main-menu > ul.menu > li{margin:0px; padding:0px; margin:0px; display:inline; float:left; position:relative; background:#FFFFFF;}
+#main-menu > ul.menu > li{margin:0px; padding:0px; margin:0px; display:inline; float:left; position:relative; background:#FFFFFF;font-family:'Fry Pro';f}
 	
 #main-menu > ul.menu > li > a{display:block; padding:0px 15px; margin:0px; text-transform:uppercase; line-height:65px; color:#646a82; position:relative; margin-top:-5px; border-top:5px solid #ebebeb;text-decoration: none;}
 
@@ -802,7 +846,11 @@ top:0px; left:-15px;}
 
 /*.entry-thumb{border:5px solid #008c99; margin-bottom:30px; display:block;}*/
 
-.entry-thumb img{display:block;}
+.entry-thumb img {
+    display: block;
+    height: 250px;
+    border:3px solid white;
+}
 
 #primary.with-sidebar .dt-sc-one-half .entry-meta .blog-author{max-width:50px; max-height:50px; margin-bottom:10px;}
 
@@ -862,7 +910,7 @@ ul.commentlist li ul.children{width:100%; float:left; clear:both; margin:20px 0p
 
 .fullwidth-background.orange-bg .entry-meta	.blog-author:hover{border:3px solid #FFFFFF;}
 
-.fullwidth-background.orange-bg .entry-thumb{border:3px solid #FFFFFF; margin-bottom:30px; display:block;}
+.fullwidth-background.orange-bg .entry-thumb{ margin-bottom:30px; display:block;}
 
 .fullwidth-background.orange-bg .entry-meta	.blog-author{border:3px solid #FFFFFF;}
 
@@ -1212,50 +1260,117 @@ footer .footer-links p{float:left; background:url(images/footer_arrow.png) right
 
 /*changes*/
 
-header ul.dt-sc-social-icons li a.search:before{content:"\f002";position: relative;bottom: 2px;}
-
-header ul.dt-sc-social-icons li a.search span{border-color:#646a82; background:#646a82;}
-
-header ul.dt-sc-social-icons li a.search{border-color:#646a82;}
-
-.dt-menu-toggle{
-	background: #A8B8CA;
+header ul.dt-sc-social-icons li a.search:before {
+    content: "\f002";
+    position: relative;
+    bottom: 2px;
 }
-	
-footer .fa-envelope, footer .fa-phone, footer .fa-map-marker{
-	color: #a8b8ca;
-	font-size: 20px;
-	margin-right: 20px;
+
+header ul.dt-sc-social-icons li a.search span {
+    border-color: #646a82;
+    background: #646a82;
+}
+
+header ul.dt-sc-social-icons li a.search {
+    border-color: #646a82;
+    cursor: pointer;
+}
+
+.dt-menu-toggle {
+    background: #A8B8CA;
+}
+
+footer .fa-envelope, footer .fa-phone, footer .fa-map-marker {
+    color: #a8b8ca;
+    font-size: 20px;
+    margin-right: 20px;
 }
 
 .login_icon {
     font-size: 20px;
 }
 
-.search_tool{
-	display: none;
-	height: 70px;
-    border-top: 5px solid #646a82;
+.search_tool {
+    display: none;
+    height: 0;
     position: relative;
     top: -5px;
-    margin-left: -1px;
-	float: left;
+    float: right;
+    transition: all 0.6s ease-in-out
 }
 
-.search_tool input{
-	color: #646a82;
+.search_tool input {
+    color: #646a82;
     font-size: 17px;
-    padding: 21px 10px;
-	padding-right: 0;
-    width: 154px;
+    padding: 23px 5px 20px 10px;
+    width: 152px;
     border: none;
+    border-top: 5px solid #646a82;
+    box-shadow: none;
+    border-radius: 0;
+    margin-right: -3px;
+}
+
+.search_tool input:focus {
     box-shadow: none;
 }
 
-.search_tool input:focus{
-	box-shadow: none;
+.search_tool button {
+    border-top: 9px solid #646a82;
+    color: white;
+    background: #646a82;
+    width: 50px;
+    height: 70px;
+    font-size: 16px;
+    padding: 0px 10px;
 }
 
+.search_tool button span:before {
+    position:relative;
+    bottom:2px;
+}
+
+#searchingResult {
+    display: none;
+    position: relative;
+    z-index: 5;
+    margin-top: 2px;
+    overflow-y: auto;
+    width: 100%;
+    height: 408px;
+    -ms-overflow-style: none;
+}
+
+#searchingResult::-webkit-scrollbar {
+    display: none;
+}
+
+
+#searchingResult li {
+    background: white;
+    float: none;
+    display: block;
+    padding: 0;
+    border-bottom: 3px solid #646A82;
+    text-transform: capitalize;
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+}
+
+#searchingResult li:first-child {
+    border-top: 3px solid #646A82;
+}
+
+#searchingResult li a p {
+    color: #646A82;
+    padding: 10px;
+    height: 42px;
+    margin: 0
+}
+
+#searchingResult li a:hover, #searchingResult li a:focus {
+    text-decoration: none;
+}
 
 header .login-details .login a {
     display: inline-block;
@@ -1265,8 +1380,8 @@ header .login-details .login a {
     text-decoration: none;
 }
 
-header .login-details .login a:hover{
-	color: #646A82;
+header .login-details .login a:hover {
+    color: #646A82;
 }
 
 .contact {
@@ -1281,74 +1396,107 @@ header .login-details .login a:hover{
 .contact .contact_info i {
     font-size: 30px;
 }
+
 .contact .contact_info p {
     margin-top: 10px;
     text-decoration: underline;
     font-size: 15px;
     margin-right: 10px;
-	color:#646a82;
+    color: #646a82;
 }
 
-footer aside h3{
-	color:#646a82;
+footer aside h3 {
+    color: #646a82;
 }
 
-@media only screen and (max-width:1240px){
-	header ul.dt-sc-social-icons li a{
-		width: 40px;
-		font-size: 14px;
-	}
 
-	header ul.dt-sc-social-icons li a.search:before{
-		bottom: 0px;
-	}
-
-	.search_tool input{
-		width: 130px;
-	}
-
+@media only screen and (max-width:959px) {
+    .contact .contact_info p {
+        font-size: 13px !important;
+    }
 }
 
-@media only screen and (max-width:959px){
-	.contact .contact_info p {
-		font-size: 13px !important;
-	}
+@media only screen and (max-width: 767px) {
+    header .login-details {
+        float: none;
+        margin: 65px 0px 25px 0px;
+        padding: 0px;
+        text-align: center;
+    }
 
-	.search_tool input{
-		width: 110px;
-	}
+    .contact {
+        margin-top: 0 !important;
+    }
+
+    .contact .contact_info {
+        margin-bottom: 30px;
+    }
+
+    .contact .contact_info p {
+        font-size: 15px !important;
+    }
 }
 
-@media only screen and (max-width: 767px){
-	header .login-details {
-		float: none;
-		margin: 65px 0px 25px 0px;
-		padding: 0px;
-		text-align: center;
-	}
-
-	.contact{
-		margin-top: 0 !important;
-	}
-
-	.contact .contact_info{
-		margin-bottom: 30px;
-	}
-
-	.contact .contact_info p {
-		font-size: 15px !important;
-	}
-
-	#icons{
-		display: flex;
-    	justify-content: center;
-		margin-bottom: 9px !important;
-	}
+@media only screen and (max-width: 319px) {
+    #icons {
+        margin: 44px -15px 0px 0px !important;
+    }
 }
 
-@media only screen and (max-width: 319px){
-	#icons{
-		margin: 44px -15px 0px 0px !important;
-	}
+@media only screen and (min-width:768px) and (max-width:959px) {
+    .search_tool button {
+        width: 40px;
+        font-size: inherit;
+        padding: 0 5px;
+        height: 71px;
+    }
 }
 
+@media only screen and (max-width: 767px) {
+    .formSearch {
+        position: relative;
+    }
+
+    .formSearch .search_tool {
+        position: absolute !important;
+        top: 39px;
+        left: 91px;
+    }
+
+    .search_tool input {
+        width: 160px;
+        padding: 21px 5px 17px 10px;
+    }
+
+    .search_tool button {
+        height: 65px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .formSearch .search_tool {
+        left: 26px !important;
+    }
+}
+
+@media only screen and (max-width: 319px) {
+    #icons li {
+        float: left !important;
+    }
+
+    .formSearch .search_tool {
+        left: 15px !important;
+    }
+
+    .search_tool button {
+        width: 40px;
+    }
+
+    .search_tool input {
+        width: 115px;
+    }
+
+    #searchingResult li a p {
+        height: unset !important;
+    }
+}

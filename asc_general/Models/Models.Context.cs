@@ -32,29 +32,31 @@ public partial class DbAscEntities : DbContext
     }
 
 
+    public virtual DbSet<like> likes { get; set; }
+
+    public virtual DbSet<admin> admins { get; set; }
+
     public virtual DbSet<blog_category> blog_category { get; set; }
 
     public virtual DbSet<cartoon> cartoons { get; set; }
-
-    public virtual DbSet<gym_blog> gym_blog { get; set; }
 
     public virtual DbSet<food_categories> food_categories { get; set; }
 
     public virtual DbSet<food> foods { get; set; }
 
+    public virtual DbSet<gym_blog> gym_blog { get; set; }
+
+    public virtual DbSet<health_staff> health_staff { get; set; }
+
     public virtual DbSet<lettr> lettrs { get; set; }
 
     public virtual DbSet<name> names { get; set; }
-
-    public virtual DbSet<blog> blogs { get; set; }
 
     public virtual DbSet<our_complex> our_complex { get; set; }
 
     public virtual DbSet<region> regions { get; set; }
 
-    public virtual DbSet<health_staff> health_staff { get; set; }
-
-    public virtual DbSet<admin> admins { get; set; }
+    public virtual DbSet<blog> blogs { get; set; }
 
     public virtual DbSet<user> users { get; set; }
 

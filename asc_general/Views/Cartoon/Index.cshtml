@@ -25,8 +25,8 @@
           
             <ul id="hexGrid">
 
-@foreach (cartoon ctoon in Model.cartoon)
-{
+         @foreach (cartoon ctoon in Model.cartoon)
+               {
                 <li class="hex">
                     <div class="hexIn">                        
                         <a class="hexLink" href="@Url.Action("index","cartoon_blog",new { id =ctoon.id })">                            
@@ -36,7 +36,7 @@
                         </a>
                     </div>
                 </li>
-}
+                      }
             </ul>
                 <div class="dt-sc-hr-small"></div>
 

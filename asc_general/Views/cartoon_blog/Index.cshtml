@@ -4,6 +4,7 @@
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
+    string FB = "http://localhost:59178/Complex/Index/" + Model.cartoon_blog.id;
 }
 
 @section cizgiCss{
@@ -22,6 +23,7 @@
                     <a href="@Url.Action("index","home")" class="dark-purple">Home</a>
                     <span class="fa fa-angle-double-right"></span>
                     <span class="current dark-purple">@Model.cartoon_blog.title</span>
+           
                 </div>
             </div>
         </div>
@@ -36,7 +38,9 @@
                             <div class="blog-entry-inner">
                                 <div class="entry-thumb">
                                     <a href="#"><img src="~/Uploads/@Model.cartoon_blog.photo" alt="" title=""></a>
+                               
                                 </div>
+                           
                                 <div class="entry-details">
                                     <div class="entry-title">
                                         <h3><a href="#" class="dark-purple">@Model.cartoon_blog.title </a></h3>
@@ -47,7 +51,10 @@
                                    @Model.cartoon_blog.text
                                         </p>
                                     </div>
-
+                                    @if (Session["user"] != null)
+                                    {
+                                        <div class="fb-comments" data-href="@FB" data-numposts="1" data-width="750"></div>
+                                    }
                                 </div>
                             </div>
                             <iframe width="500" height="400" src="https://www.youtube.com/embed/@Model.cartoon_blog.video_url"
@@ -65,7 +72,7 @@
                             <!-- End Search Form-->
                             <div class="recent-post">
                                 <div class="sections">
-                                    <h2>Diger Meqaleler</h2>
+                                    <h2>Digər Məqalələr</h2>
                                 </div>
                                 <ul class="recent-post-list list-inline">
                                     @foreach (cartoon ct in Model.othercartoons)
@@ -98,3 +105,13 @@
 
 </div>
 
+<div id="fb-root"></div>
+<script>
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>

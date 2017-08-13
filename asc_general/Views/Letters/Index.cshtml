@@ -21,12 +21,12 @@
                     <img src="~/Public/images/mypics/baby-feet-pink.png" alt="">
                 </h1>
             </div>
-            <div class="baby_names">             
+            <div class="baby_names">
                 <ul class="text-center">
                     @foreach (lettr l in Model.herfler)
                     {
                         <li>
-                            @Html.ActionLink(@l.name,"Name/"+@l.id,"Names")
+                            <a href=@Url.Action("name", "names",new { id=l.id, gender=true})>@l.name</a>
                         </li>
                     }
                 </ul>
@@ -45,7 +45,7 @@
                     @foreach (lettr l in Model.herfler)
                     {
                         <li>
-                           @Html.ActionLink(@l.name, "Name/" + @l.id, "Names")
+                            <a href=@Url.Action("name","names",new { id=l.id,gender=false})>@l.name</a>
                         </li>
                     }
                 </ul>

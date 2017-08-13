@@ -1,5 +1,13 @@
+
+
+@font-face {
+    font-family: 'Fry Pro';
+    src: url('~/Public/fonts/FryPro.otf');
+}
+
+
 body {
-  font: 100% / 1.414  'Bubblegum Sans', cursive;
+  font: 100% / 1.414  'Fry Pro', cursive;
   background-image: url("../images/gradientbg.jpg");
   background-size: cover;
 }

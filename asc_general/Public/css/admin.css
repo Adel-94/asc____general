@@ -28,16 +28,35 @@
 /*-------------------------------------------------------*/
 
 body {
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'ALBOROTO';
 }
 /* fallback */
 
-@font-face {
+/*@font-face {
     font-family: 'Material Icons';
     font-style: normal;
     font-weight: 400;
     src: local('Material Icons'), local('MaterialIcons-Regular'), url('../fonts/micon.woff2') format('woff2');
+}*/
+
+
+@font-face {
+    font-family: ALBOROTO;
+    src: url('~/Public/fonts/ALBOROTO.otf');
 }
+
+@font-face {
+    font-family: ComicSans;
+    font-weight: bold;
+    src: url('~/Public/fonts/comic-unipro-bd.ttf');
+}
+
+@font-face {
+    font-family: FryPro;
+    font-weight: bold;
+    src: url('~/Public/fonts/FryPro.otf');
+}
+
 .material-icons {
     font-family: 'Material Icons';
     font-weight: normal;

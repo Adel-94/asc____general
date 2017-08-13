@@ -117,7 +117,7 @@ header.fixed .logo small{border-color: rgba(0,0,0,0.2)}*/
 /* ================= Hero Section end ================= */
 .section{padding:100px 0;}
 .grey-bg{background:#f5f5f5;}
-.heading-container{text-align:center; margin-bottom:80px;}
+.heading-container{text-align:center; margin-bottom:55px;}
 .heading-container h6{color: #74a534; font-family:'Nova Flat'; font-size:20px; font-weight:400; position:relative;margin-bottom:10px; }
 .heading-container h3{margin:0;}
 .heading-container p{max-width:490px; margin:0 auto; font-size:15px;}
@@ -152,7 +152,7 @@ ul.class-list li{width:33.3%; float:left; padding:0 15px; margin-bottom:40px;}
 ul.schedule-tab{width:100%; display:inline-block; vertical-align:top;}
 ul.schedule-tab li{float:left; width:16.66%; padding:1px;}
 ul.schedule-tab li a{float:left; width:100%; padding:15px; text-align:center; background:#fff;font-weight:400;font-family:'Nova Flat'; font-size:14px; box-shadow:0 2px 4px rgba(0,0,0,0.05);}
-ul.schedule-tab li a:hover{} 
+
 ul.schedule-tab li a.active, ul.schedule-tab li a.active:focus{transform:scale(1.1); background: #74a534; color:#fff; border-radius:4px; position:relative;  box-shadow:0 20px 20px -15px rgba(0,0,0,0.4) !important;}
 .schedule-container{width:100%; display:inline-block; vertical-align:top; padding:40px 0;}
 .schedule-details{display:none;}
@@ -328,6 +328,9 @@ div.trainer-box{
     border-radius: 11px; 
 }
 .popup{
-    width: 50%:
+    width: 50%;
     
+}
+small {
+    font-family: 'Fry Pro';
 }

@@ -4,6 +4,7 @@
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
+    string FB = "http://localhost:59178/Complex/Index/" + Model.foodId.id;
 }
 
 @section receptCss {
@@ -35,6 +36,10 @@
                             <div class="post-text">
                                 <p> @Model.foodId.text</p>
                             </div>
+                            @if (Session["user"] != null)
+                            {
+                                <div class="fb-comments" data-href="@FB" data-numposts="1" data-width="750"></div>
+                            }
                         </div>
                     </article>
 
@@ -61,7 +66,7 @@
                     <!-- End Search Form-->
                     <div class="recent-post">
                         <div class="sections">
-                            <h2>Diger Meqaleler</h2>
+                            <h2>Digərləri</h2>
                         </div>
                         <ul class="recent-post-list list-inline">
                             @foreach (food_categories f in Model.categories)
@@ -81,4 +86,54 @@
         </div><!-- End Row -->
     </div>
 </div>
+
+<!-- Start owl carousel -->
+<div class="slider">
+    <div class="container">
+                <h2>Digər Reseptlər</h2>
+        <div class="row">
+            <div class="col-md-8 col-sm-12 col-xs-12">
+                <div class="owl-carousel owl-theme">
+                    @foreach (food foooood in Model.allrecepts)
+                    {
+                        <div class="item">
+                            <a href=@Url.Action("index", "Recepts", new { id = foooood.id , categoryID = foooood.category_id })>
+                               
+                                     <img src="~/Uploads/@foooood.photo" alt="@foooood.name" class="activeInCarousel" />
+                            </a>
+                        </div>
+                                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End owl carousel -->
+
+@section carouselJS{
+    <script src="~/Public/owlcarousel/owlJs/jquery.min.js"></script>
+    <script src="~/Public/owlcarousel/owlJs/owl.carousel.js"></script>
+    <script>
+        $(document).ready(function () {
+            var owl = $('.owl-carousel');
+            owl.owlCarousel({
+                margin: 10,
+                nav: false,
+                loop: false,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+
+                    600: {
+                        items: 3
+                    },
+                    1000: {
+                        items: 5
+                    }
+                }
+            });
+
+        });
+    </script>
 

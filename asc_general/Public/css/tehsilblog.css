@@ -19,3 +19,18 @@
 .warpper-blog .inner-blog .post-title a {
     color: #ffce72;
 }
+
+.prevnext i {
+    color: #ffce72;
+    font-size: 20px;
+}
+
+.prevnext {
+    margin-top: 30px;
+}
+
+    .prevnext a {
+        color: #5c5c5c;
+        font-size: 20px;
+        margin-left: 50px;
+    }

@@ -22,8 +22,10 @@ namespace asc_general.Controllers
             dynamic mymodel = new ExpandoObject();
             cartoon cartoon_id = db.cartoons.Find(id);
             mymodel.cartoon_blog = cartoon_id;
-            mymodel.othercartoons = db.cartoons.Where(o => o.id != cartoon_id.id).Take(5).ToList();
+            mymodel.othercartoons = db.cartoons.Where(o => o.id != cartoon_id.id).ToList();
             return View(mymodel);
         }
+
+ 
     }
 }

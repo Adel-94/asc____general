@@ -1,7 +1,18 @@
+
+
+
+
+@font-face {
+    font-family: 'Fry Pro';
+    src: url('~/Public/fonts/FryPro.otf');
+}
+
+
+
 body {
-  font: 100% / 1.414  'Bubblegum Sans', cursive;
-  background-image: url("../images/gradient.jpg");
-  background-size: cover;
+    font-family: 'Fry Pro', cursive;
+    background-image: url("../images/gradient.jpg");
+    background-size: cover;
 }
 
 
@@ -177,3 +188,18 @@ label {
 .signup__link:focus, .signup__link:hover {
   color: #787878;
 }
+
+.btn:hover {
+    color:white;
+}
+.home a {
+    margin-top: 12px;
+    margin-left: 12px;
+    font-size: 16px;
+    border-bottom: 2px solid;
+    color: #D19CA4;
+}
+    .home a:hover {
+        text-decoration: none;
+     color:   #A77C83;
+    }

@@ -18,6 +18,15 @@ using System;
 public partial class blog
 {
 
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+    public blog()
+    {
+
+        this.likes = new HashSet<like>();
+
+    }
+
+
     public int id { get; set; }
 
     public string title { get; set; }
@@ -30,9 +39,15 @@ public partial class blog
 
     public string text { get; set; }
 
+    public Nullable<int> mylikes { get; set; }
+
 
 
     public virtual blog_category blog_category { get; set; }
+
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+
+    public virtual ICollection<like> likes { get; set; }
 
 }
 

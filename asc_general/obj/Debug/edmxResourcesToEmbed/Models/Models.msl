@@ -1,34 +1,42 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="ascModelStoreContainer" CdmEntityContainer="DbAscEntities">
+    <EntitySetMapping Name="likes">
+      <EntityTypeMapping TypeName="ascModel.like">
+        <MappingFragment StoreEntitySet="likes">
+          <ScalarProperty Name="liked" ColumnName="liked" />
+          <ScalarProperty Name="blog_id" ColumnName="blog_id" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="admins">
+      <EntityTypeMapping TypeName="ascModel.admin">
+        <MappingFragment StoreEntitySet="admin">
+          <ScalarProperty Name="image" ColumnName="image" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="adminname" ColumnName="adminname" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="blog_category">
       <EntityTypeMapping TypeName="ascModel.blog_category">
         <MappingFragment StoreEntitySet="blog_category">
-          <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="id" ColumnName="id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="cartoons">
       <EntityTypeMapping TypeName="ascModel.cartoon">
         <MappingFragment StoreEntitySet="cartoon">
-          <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="title" ColumnName="title" />
-          <ScalarProperty Name="photo" ColumnName="photo" />
-          <ScalarProperty Name="text" ColumnName="text" />
           <ScalarProperty Name="video_url" ColumnName="video_url" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="gym_blog">
-      <EntityTypeMapping TypeName="ascModel.gym_blog">
-        <MappingFragment StoreEntitySet="gym_blog">
-          <ScalarProperty Name="video_url" ColumnName="video_url" />
-          <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="title" ColumnName="title" />
-          <ScalarProperty Name="photo" ColumnName="photo" />
-          <ScalarProperty Name="description" ColumnName="description" />
           <ScalarProperty Name="text" ColumnName="text" />
+          <ScalarProperty Name="photo" ColumnName="photo" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="id" ColumnName="id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -52,6 +60,33 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="gym_blog">
+      <EntityTypeMapping TypeName="ascModel.gym_blog">
+        <MappingFragment StoreEntitySet="gym_blog">
+          <ScalarProperty Name="video_url" ColumnName="video_url" />
+          <ScalarProperty Name="text" ColumnName="text" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="photo" ColumnName="photo" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="health_staff">
+      <EntityTypeMapping TypeName="ascModel.health_staff">
+        <MappingFragment StoreEntitySet="health_staff">
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="facebook" ColumnName="facebook" />
+          <ScalarProperty Name="instagram" ColumnName="instagram" />
+          <ScalarProperty Name="text_about" ColumnName="text_about" />
+          <ScalarProperty Name="photo" ColumnName="photo" />
+          <ScalarProperty Name="profession" ColumnName="profession" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="lettrs">
       <EntityTypeMapping TypeName="ascModel.lettr">
         <MappingFragment StoreEntitySet="lettrs">
@@ -67,18 +102,6 @@
           <ScalarProperty Name="decription" ColumnName="decription" />
           <ScalarProperty Name="lettrs_id" ColumnName="lettrs_id" />
           <ScalarProperty Name="name1" ColumnName="name" />
-          <ScalarProperty Name="id" ColumnName="id" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="blogs">
-      <EntityTypeMapping TypeName="ascModel.blog">
-        <MappingFragment StoreEntitySet="blog">
-          <ScalarProperty Name="text" ColumnName="text" />
-          <ScalarProperty Name="category_id" ColumnName="category_id" />
-          <ScalarProperty Name="date" ColumnName="date" />
-          <ScalarProperty Name="photo" ColumnName="photo" />
-          <ScalarProperty Name="title" ColumnName="title" />
           <ScalarProperty Name="id" ColumnName="id" />
         </MappingFragment>
       </EntityTypeMapping>
@@ -108,27 +131,15 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="health_staff">
-      <EntityTypeMapping TypeName="ascModel.health_staff">
-        <MappingFragment StoreEntitySet="health_staff">
-          <ScalarProperty Name="email" ColumnName="email" />
-          <ScalarProperty Name="phone" ColumnName="phone" />
-          <ScalarProperty Name="facebook" ColumnName="facebook" />
-          <ScalarProperty Name="instagram" ColumnName="instagram" />
-          <ScalarProperty Name="text_about" ColumnName="text_about" />
+    <EntitySetMapping Name="blogs">
+      <EntityTypeMapping TypeName="ascModel.blog">
+        <MappingFragment StoreEntitySet="blog">
+          <ScalarProperty Name="mylikes" ColumnName="mylikes" />
+          <ScalarProperty Name="text" ColumnName="text" />
+          <ScalarProperty Name="category_id" ColumnName="category_id" />
+          <ScalarProperty Name="date" ColumnName="date" />
           <ScalarProperty Name="photo" ColumnName="photo" />
-          <ScalarProperty Name="profession" ColumnName="profession" />
-          <ScalarProperty Name="name" ColumnName="name" />
-          <ScalarProperty Name="id" ColumnName="id" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="admins">
-      <EntityTypeMapping TypeName="ascModel.admin">
-        <MappingFragment StoreEntitySet="admin">
-          <ScalarProperty Name="image" ColumnName="image" />
-          <ScalarProperty Name="password" ColumnName="password" />
-          <ScalarProperty Name="adminname" ColumnName="adminname" />
+          <ScalarProperty Name="title" ColumnName="title" />
           <ScalarProperty Name="id" ColumnName="id" />
         </MappingFragment>
       </EntityTypeMapping>
@@ -137,7 +148,6 @@
       <EntityTypeMapping TypeName="ascModel.user">
         <MappingFragment StoreEntitySet="user">
           <ScalarProperty Name="password1" ColumnName="password1" />
-          <ScalarProperty Name="image" ColumnName="image" />
           <ScalarProperty Name="email" ColumnName="email" />
           <ScalarProperty Name="password" ColumnName="password" />
           <ScalarProperty Name="username" ColumnName="username" />

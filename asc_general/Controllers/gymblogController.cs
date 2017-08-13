@@ -22,6 +22,7 @@ namespace asc_general.Controllers
             dynamic mymodel = new ExpandoObject();
             gym_blog gym_id = db.gym_blog.Find(id);
             mymodel.gym_blog = gym_id;
+            mymodel.other_sports = db.gym_blog.Where(s => s.id != gym_id.id).ToList();
             return View(mymodel);
         }
     }

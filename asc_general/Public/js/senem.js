@@ -1,32 +1,26 @@
 jQuery(document).ready(function ($) {
-
-    // *MENU*
     //menu searching starts
     var clickNumber = 0;
+    var searchString = "";
 
-    $("#icons").find("li").eq(0).click(function () {
-        var search = $(this).children();
-        search.css({ "background-color": "#646a82", "color": "white", "border-color": "#646a82" })
-        $(this).siblings().hide();
+    $("#icons").find("li").eq(3).click(function () {
+        console.log("click")
+        $(this).hide().siblings().hide();
         $(".search_tool").show();
-        search.addClass("no_hover").children().hide();
-        clickNumber++;
-
-        if (clickNumber == 2) {
-            //ajax
-            console.log("istek qeyde alindi");
-            clickNumber = 0;
-        }
     });
+
+    //Window clicking
 
     $(window).click(function (e) {
         if ($(e.target).hasClass("fa-search") || $(e.target).parent().hasClass("search_tool")) {
+            clickNumber = 1;
             return true;
         }
         else {
-            $(".search").removeClass("no_hover").css({ "background-color": "", "color": "" }).children().show();
-            $(".search").parent().siblings().show();
+            $("#icons").find("li").show();
             $(".search_tool").hide().find("input").val("");
+            $("#searchingResult").find("li").remove().hide();
+            clickNumber = 0;
         }
     });
 
@@ -53,7 +47,7 @@ jQuery(document).ready(function ($) {
     }
 
     for (var i = 0; i < 2; i++) {
-        if (i == 0) {
+        if (i === 0) {
             babyNamesColorChange(i + 1, i, "#FFAAAA");
         }
         else {
@@ -61,16 +55,5 @@ jQuery(document).ready(function ($) {
         }
     }
 
-    // letter color change ends
-
-    //*EDUCATION* 
-
-    //education carousel starts
-    $('#carousel-example-generic').carousel({
-        pause: true
-    });
-
-    //education carousel ends
-
-
+    // letter color change ends    
 });

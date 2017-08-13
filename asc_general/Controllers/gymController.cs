@@ -10,15 +10,16 @@ namespace asc_general.Controllers
 {
     public class gymController : Controller
     {
-       private DbAscEntities db = new DbAscEntities();
+        private DbAscEntities db = new DbAscEntities();
         // GET: gym
         public ActionResult Index()
         {
             dynamic mymodel = new ExpandoObject();
             mymodel.gym = db.gym_blog.Take(6).ToList();
-            //mymodel.idman = db.idman_kompp.Take(4).ToList();
+            mymodel.regions = db.regions.Take(4).ToList();
+            mymodel.gymComplex = db.our_complex.Where(c => c.edu_or_gym == false).Take(8).ToList();
             return View(mymodel);
-            
+
         }
     }
 }

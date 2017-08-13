@@ -1,15 +1,20 @@
-﻿<!DOCTYPE HTML>
+﻿@using asc_general.Models;
+@{
+    var u = Session["user"] as user;
+}
+
+<!DOCTYPE HTML>
 
 <html lang="az" class="no-js">
 
 <head>
     <meta http-equiv="content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>Kids Life- Home</title>
+    <title>Junior.az</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="~/Public/images/mypics/babyfoot.ico" type="image/x-icon" />
     <link rel="stylesheet" href="~/Public/bootstrap/css/bootstrap.css">
 
     @RenderSection("herflerCss", false)
@@ -25,23 +30,21 @@
     @RenderSection("dr_profileCss", false)
     @RenderSection("complexCss", false)
     @RenderSection("receptCss", false)
+    @RenderSection("allComplexCss",false)
+    @RenderSection("searchCss",false)
     
 
     <link href="~/Public/style.css" rel="stylesheet" type="text/css">
     <link href="~/Public/css/shortcodes.css" rel="stylesheet" type="text/css">
     <link href="~/Public/css/responsive.css" rel="stylesheet" type="text/css">
     <link href="~/Public/css/font-awesome.min.css" rel="stylesheet" type="text/css">
- 
-    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
-          rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Bubblegum+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!--jquery-->
    
-    <script src="~/Public/js/modernizr-2.6.2.min.js"></script>
 </head>
 
-<body class="main">
+
+<body class="main" style="background:white;">
     <!--wrapper starts-->
     <div class="wrapper">
         <!--header starts-->
@@ -49,7 +52,7 @@
             <div class="container">
                 <div class="logo">
                     <a href="index.html" title="Kids Life">
-                        <img src="~/Public/images/logo2.png" alt="kids life" title="kids life" style="width:150px;">
+                        <img src="~/Public/images/logojunior.png" alt="kids life" title="kids life" style="width:135px; margin-top:14px;">
              
                     </a>
                 </div>
@@ -59,18 +62,16 @@
                 {
                     <div class="login-details">
                         <p class="login">
-                            <a href="#">Qeydiyyat <i class="fa fa-user login_icon" aria-hidden="true"></i></a>
+                            <a href="@Url.Action("Register", "user")">Qeydiyyat <i class="fa fa-user login_icon" aria-hidden="true"></i></a>
                             <a href="@Url.Action("Login", "user")">Giriş <i class="fa fa-sign-in login_icon" aria-hidden="true"></i></a>
                         </p>
                     </div>
                     }
                     else
                     {
-                        <div class="login-details" style="margin:10px 0px;">
+                        <div class="login-details">
                             <p class="login">
-                                <a href="@Url.Action("index", "user")">
-                                    <img src="~/Uploads/2017724133011trainer1.jpg" style="border-radius: 100%;width: 82px;height: 82px;" />
-                                </a>
+                                <a href="@Url.Action("index", "user")" style="color:white; margin-left:20px;"><i class="fa fa-user-circle-o" aria-hidden="true" style="margin-left:5px; font-size: 20px;"></i> @u.username</a>
                             </p>
                             </div>
                             }
@@ -114,11 +115,6 @@
 
                     <ul id="icons" class="dt-sc-social-icons">
                         <li>
-                            <a href="#" class="dt-sc-tooltip-top search">
-                                <span class="fa fa-search"></span>
-                            </a>
-                        </li>
-                        <li>
                             <a href="#" title="Facebook" class="dt-sc-tooltip-top facebook">
                                 <span class="fa fa-facebook"></span>
                             </a>
@@ -133,10 +129,22 @@
                                 <span class="fa fa-google-plus"></span>
                             </a>
                         </li>
-                        <div class="search_tool">
-                            <input type="text" placeholder="Axtar">
-                        </div>
+                        <li>
+                            <a class="dt-sc-tooltip-top search">
+                                <span class="fa fa-search"></span>
+                            </a>
+                        </li>
                     </ul>
+
+                    <form action="@Url.Action("Index", "Search", new { id = 1 })" method="get" class="formSearch" autocomplete="off">
+                        <div class="search_tool">
+                            <input type="text" placeholder="Axtar" id="searchString" name="searchString">
+                            <button type="submit" value="Submit">
+                                <span class="fa fa-search"></span>
+                            </button>
+                            <ul id="searchingResult" class="searchingResult"></ul>
+                        </div>
+                    </form>
                 </div>
             </div>
             <!--menu-container ends-->
@@ -209,19 +217,11 @@
     @RenderSection("tehsilJS",false)
     @RenderSection("foodblogJs",false)
     @RenderSection("homeJs", false)
+    @RenderSection("carouselJS",false)
+    @RenderSection("healthJs",false)
 
     <!--Java Scripts--> 
    
-    @*<script type="text/javascript" src="~/Public/js/jquery.js"></script>
-    <script type="text/javascript" src="~/Public/js/jquery.validate.min.js"></script>
-    <script type="text/javascript" src="~/Public/js/jquery.sticky.js"></script>
-    <script type="text/javascript" src="~/Public/js/jquery.nicescroll.min.js"></script>
-    <script type="text/javascript" src="~/Public/js/jquery.inview.js"></script>
-    <script type="text/javascript" src="~/Public/js/twitter/jquery.tweet.min.js"></script>
-    <script type="text/javascript" src="~/Public/js/shortcodes.js"></script>
-    <script type="text/javascript" src="~/Public/js/custom.js"></script>
-    <script type="text/javascript" src="~/Public/bootstrap/js/bootstrap.js"></script>
-    <script type="text/javascript" src="~/Public/js/senem.js"></script>*@
  
 
     <!--Java Scripts-->
@@ -242,6 +242,8 @@
     <script type="text/javascript" src="~/Public/js/custom.js"></script>
     <script type="text/javascript" src="~/Public/bootstrap/js/bootstrap.js"></script>
     <script type="text/javascript" src="~/Public/js/senem.js"></script>
+    <script type="text/javascript" src="~/Public/js/search.js"></script>
+
     <!-- Layer Slider -->
     <script type="text/javascript" src="~/Public/js/jquery-transit-modified.js"></script>
     <script type="text/javascript" src="~/Public/js/layerslider.kreaturamedia.jquery.js"></script>
@@ -249,6 +251,8 @@
     <script type='text/javascript' src="~/Public/js/layerslider.transitions.js"></script>
     <script type="text/javascript">var lsjQuery = jQuery;</script>
     <script type="text/javascript">
+     
+
         var lsjQuery = jQuery;
     </script>
     <script type="text/javascript">

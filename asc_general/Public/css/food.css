@@ -31,19 +31,10 @@ Last Change:	June 24, 2017
 ---------------------------------------------------*/
 
 
-/*--------------------------------*/
-/*  Imported CSS
-/*--------------------------------*/
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700');
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700');
-@import url('https://fonts.googleapis.com/css?family=Bubblegum Sans');
-/* OTHER IMPORTED CSS */
+
 @import "font-awesome.min.css";
 
 
-/*--------------------------------*/
-/*  Default CSS
-/*--------------------------------*/
 body {
     background: #fff none repeat scroll 0 0;
     color: #999999;
@@ -201,7 +192,7 @@ a {
 }
 
 /* Placeholder Color CSS */
-::-webkit-input-placeholder {
+/*::-webkit-input-placeholder {
     color: #dddddd !important;
 }
 ::-moz-placeholder {
@@ -212,7 +203,7 @@ a {
 }
 :-moz-placeholder {
     color: #dddddd!important;
-}
+}*/
 
 
 /*-- Image --*/
@@ -253,7 +244,7 @@ a {
 
 /*-- Border --*/
 .section-title h4 {
-    font-family: 'Bubblegum Sans', cursive;
+    font-family: 'Fry Pro', cursive;
     text-transform: capitalize;
     font-size: 36px;
     margin-bottom: 0;
@@ -936,7 +927,7 @@ a {
 }
 
     .about-food h2 {
-        font-family: 'Bubblegum Sans', cursive;
+        font-family: 'Fry Pro', cursive;
     }
 
     .about-food strong {
@@ -1028,7 +1019,7 @@ a {
     overflow: hidden;
 }
 .bd-video-col h2 {
-    font-family: 'Bubblegum Sans', cursive;
+    font-family: 'Fry Pro', cursive;
     font-size: 42px;
     color: #ffffff;
     margin-bottom: 20px;
@@ -1724,31 +1715,9 @@ a {
 /*--------------------------------*/
 /*  17. start Scroll top
 /*--------------------------------*/
-.back-to-top {
-    background: #f32a2a;
-    border-radius: 30px;
-    -webkit-border-radius: 30px;
-    -moz-border-radius: 30px;
-    /*-ms-border-radius: 30px;
-    -o-border-radius: 30px;*/
-    bottom: 20px;
-    cursor: pointer;
-    color: #fff;
-    display: none;
-    font-size: 28px;
-    height: 50px;
-    line-height: 1.7;
-    right: 40px;
-    position: fixed;
-    text-align: center;
-    width: 50px;
-    z-index: 99999;
-}
 
-/*.back-to-top:hover{
-    background: #868686;
-    color: #ffffff;
-}*/
+
+
 
 @media only screen and (max-width: 484px) {
   .carousel-caption h3
@@ -1784,3 +1753,22 @@ a {
 }
 
 
+.inner-blog a i {
+    color: red;
+    font-size: 25px;
+}
+
+.prevnext i {
+    color: #ef4836;
+    font-size: 20px;
+}
+
+.prevnext {
+    margin-top: 30px;
+}
+
+    .prevnext a {
+        color: #5c5c5c;
+        font-size: 20px;
+        margin-left: 50px;
+    }

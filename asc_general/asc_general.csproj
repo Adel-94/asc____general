@@ -173,10 +173,7 @@
     <Compile Include="Areas\Admins\Controllers\regions_CrudController.cs" />
     <Compile Include="Controllers\CartoonController.cs" />
     <Compile Include="Controllers\cartoon_blogController.cs" />
-    <Compile Include="Controllers\Controllers\ComplexController.cs" />
-    <Compile Include="Controllers\Controllers\LikedController.cs" />
-    <Compile Include="Controllers\Controllers\MemorizedController.cs" />
-    <Compile Include="Controllers\Controllers\MeqaleController.cs" />
+    <Compile Include="Controllers\ComplexController.cs" />
     <Compile Include="Controllers\Dr_ProfileController.cs" />
     <Compile Include="Controllers\EducationController.cs" />
     <Compile Include="Controllers\FoodController.cs" />
@@ -185,8 +182,11 @@
     <Compile Include="Controllers\healthController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LettersController.cs" />
+    <Compile Include="Controllers\LikedController.cs" />
+    <Compile Include="Controllers\MeqaleController.cs" />
     <Compile Include="Controllers\NamesController.cs" />
     <Compile Include="Controllers\ReceptsController.cs" />
+    <Compile Include="Controllers\SearchController.cs" />
     <Compile Include="Controllers\SIngleBlogController.cs" />
     <Compile Include="Controllers\userController.cs" />
     <Compile Include="Global.asax.cs">
@@ -217,6 +217,9 @@
       <DependentUpon>Models.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\lettr.cs">
+      <DependentUpon>Models.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\like.cs">
       <DependentUpon>Models.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Models.Context.cs">
@@ -434,6 +437,7 @@
     <Content Include="Public\bower_components\jquery\src\var\toString.js" />
     <Content Include="Public\bower_components\jquery\src\wrap.js" />
     <Content Include="Public\css\admin.css" />
+    <Content Include="Public\css\allcomplex.css" />
     <Content Include="Public\css\animate.min.css" />
     <Content Include="Public\css\blank.html" />
     <Content Include="Public\css\bootstrap.css" />
@@ -442,10 +446,13 @@
     <Content Include="Public\css\colors\main.css" />
     <Content Include="Public\css\complex.css" />
     <Content Include="Public\css\dr_profile.css" />
+    <Content Include="Public\css\eduComplexCss.css" />
     <Content Include="Public\css\font-awesome.min.css" />
     <Content Include="Public\css\food.css" />
     <Content Include="Public\css\foodHut_responsive.css" />
     <Content Include="Public\css\foodHut_style.css" />
+    <Content Include="Public\css\gymblog.css" />
+    <Content Include="Public\css\gymComplexCss.css" />
     <Content Include="Public\css\health.css" />
     <Content Include="Public\css\healthblog.css" />
     <Content Include="Public\css\idman.css" />
@@ -900,6 +907,7 @@
     <Content Include="Public\js\owl.carousel.min66f2.js" />
     <Content Include="Public\js\plugins66f2.js" />
     <Content Include="Public\js\registermain.js" />
+    <Content Include="Public\js\search.js" />
     <Content Include="Public\js\senem.js" />
     <Content Include="Public\js\shortcodes.js" />
     <Content Include="Public\js\simple.parallax.js" />
@@ -920,6 +928,11 @@
     <Content Include="Public\js\VideoPopUp.jquery.js" />
     <Content Include="Public\js\waypoints.min66f2.js" />
     <Content Include="Public\js\wow.min66f2.js" />
+    <Content Include="Public\owlcarousel\owlCss\docs.theme.min.css" />
+    <Content Include="Public\owlcarousel\owlCss\owl.carousel.min.css" />
+    <Content Include="Public\owlcarousel\owlCss\owl.theme.default.min.css" />
+    <Content Include="Public\owlcarousel\owlJs\jquery.min.js" />
+    <Content Include="Public\owlcarousel\owlJs\owl.carousel.js" />
     <Content Include="Public\plugins\iCheck\icheck.min.js" />
     <Content Include="Public\school\404.html" />
     <Content Include="Public\school\blog-detail-full-width.html" />
@@ -1320,6 +1333,13 @@
     <Content Include="Public\bower_components\jquery\external\sizzle\dist\sizzle.min.map" />
     <Content Include="Public\bower_components\jquery\README.md" />
     <Content Include="Public\bower_components\jquery\src\.eslintrc.json" />
+    <Content Include="Public\fonts\ALBOROTO.otf" />
+    <Content Include="Public\fonts\AlwaysRadio.ttf" />
+    <Content Include="Public\fonts\comic-unipro.ttf" />
+    <Content Include="Public\fonts\comic-unipro-bd.ttf" />
+    <Content Include="Public\fonts\FryPro.otf" />
+    <Content Include="Public\fonts\Cocomat Light.otf" />
+    <Content Include="Public\fonts\Cocomat Ultralight.otf" />
     <None Include="Scripts\jquery-1.12.4.intellisense.js" />
     <Content Include="Scripts\jquery-1.12.4.js" />
     <Content Include="Scripts\jquery-1.12.4.min.js" />
@@ -1464,10 +1484,6 @@
     <Content Include="Views\Food\Index.cshtml" />
     <Content Include="Views\gym\index.cshtml" />
     <Content Include="Views\health\Index.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Cartoon.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Food.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Letters\Index.cshtml" />
     <Content Include="Views\Names\Name.cshtml" />
@@ -1485,10 +1501,12 @@
     <Content Include="Views\user\Login.cshtml" />
     <Content Include="Views\Recepts\Index.cshtml" />
     <Content Include="Views\Liked\Index.cshtml" />
-    <Content Include="Views\Memorized\Index.cshtml" />
     <Content Include="Views\Meqale\Index.cshtml" />
     <Content Include="Views\user\Register.cshtml" />
     <Content Include="Views\Shared\_UserProfileLayout.cshtml" />
+    <Content Include="Views\Complex\allComplex.cshtml" />
+    <Content Include="Views\Recepts\Allrecepts.cshtml" />
+    <Content Include="Views\Search\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

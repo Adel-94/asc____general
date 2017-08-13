@@ -19,7 +19,7 @@ namespace asc_general.Controllers
             dynamic model = new ExpandoObject();
             model.food_cat = db.food_categories.ToList();
             model.foods = db.foods.ToList();
-            model.food_blog = db.blogs.Where(b => b.blog_category.name.Equals("Qida")).OrderByDescending(b=> b.date).Take(3).ToList();
+            model.food_blog = db.blogs.Where(b => b.blog_category.name.Equals("qida")).OrderByDescending(b=> b.date).Take(3).ToList();
             return View(model);
         }
 

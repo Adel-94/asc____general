@@ -15,35 +15,11 @@ namespace asc_general.Controllers
         public ActionResult Index()
         {
             dynamic mymodel = new ExpandoObject();
-            mymodel.cartoon = db.cartoons.ToList();
+            mymodel.names = db.names.Take(4).ToList();
+            mymodel.cartoon = db.cartoons.Take(5).ToList();
+            mymodel.blogs = db.blogs.Take(2).OrderByDescending(d=> d.date).Take(2).ToList();
             return View(mymodel);
         }
 
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
-        }
-        public ActionResult Food()
-        {
-            ViewBag.Message = "foooooood";
-
-            return View();
-        }
-        public ActionResult Cartoon()
-        {
-            ViewBag.Message = "cartoon";
-
-            return View();
-        }
-  
     }
 }

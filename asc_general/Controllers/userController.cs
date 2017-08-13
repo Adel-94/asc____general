@@ -7,6 +7,8 @@ using asc_general.Models;
 using System.Dynamic;
 using System.Net;
 using System.Web.Helpers;
+using System.Data.Entity;
+using System.Diagnostics;
 
 namespace asc_general.Controllers
 {
@@ -32,19 +34,21 @@ namespace asc_general.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult Login(user  usr)
+        public ActionResult Login(user usr)
         {
-            if (usr.username != null && usr.password != null)
+            Debug.WriteLine(usr.email);
+            Debug.WriteLine(usr.password);
+            if (usr.email != null && usr.password != null)
             {
-                user user = db.users.FirstOrDefault(a => a.username == usr.username && a.password == usr.password);
+                user user = db.users.FirstOrDefault(a => a.email == usr.email && a.password == usr.password);
                 if (user != null)
                 {
                     Session["user"] = true;
                     Session["user"] = new user () {
-                        username = usr.username,
+                        username = user.username,
                         password =user.password,
                         email =user.email,
-                        image=user.image
+                        id=user.id
                     };
                     return RedirectToAction("index", "user");
                 }
@@ -84,6 +88,13 @@ namespace asc_general.Controllers
 
 
                     Session["user"] = true;
+                    Session["user"] = new user()
+                    {
+                        username = user.username,
+                        password = user.password,
+                        email = user.email,
+                        id = user.id
+                    };
                     var response = true;
                     return Json(response, JsonRequestBehavior.AllowGet);
                 }
@@ -164,6 +175,36 @@ namespace asc_general.Controllers
                 return Json(response, JsonRequestBehavior.AllowGet);
             }
         }
+        //public ActionResult Edit(int? id)
+        //{
+        //    if (id == null)
+        //    {
+        //        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+        //    }
+        //    user user_id = db.users.Find(id);
+        //    if (user_id == null)
+        //    {
+        //        return HttpNotFound();
+        //    }
+        //    return View(user_id);
+        //}
 
+        [HttpPost]
+       // [ValidateAntiForgeryToken]
+        public ActionResult Edit([Bind(Include = "id,username,email")] user userrr)
+        {
+
+           // return Content(userrr.id.ToString());
+            if (ModelState.IsValid)
+            {
+                user userInDb = db.users.Find(userrr.id);
+          
+                userInDb.email = userrr.email;
+                userInDb.username = userrr.username;
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(userrr);
+        }
     }
 }

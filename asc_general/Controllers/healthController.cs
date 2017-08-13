@@ -17,7 +17,7 @@ namespace asc_general.Controllers
         {
             dynamic mymodel = new ExpandoObject();
             mymodel.health = db.health_staff.ToList();
-            mymodel.health_blog = db.blogs.Where(h => h.blog_category.name.Equals("Saglamliq")).OrderByDescending(h => h.date).Take(3).ToList();
+            mymodel.health_blog = db.blogs.Where(h => h.blog_category.name.Equals("sağlamlıq")).OrderByDescending(h => h.date).Take(3).ToList();
             return View(mymodel);
             
         }

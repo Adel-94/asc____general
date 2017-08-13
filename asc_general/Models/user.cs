@@ -18,6 +18,15 @@ using System;
 public partial class user
 {
 
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+    public user()
+    {
+
+        this.likes = new HashSet<like>();
+
+    }
+
+
     public int id { get; set; }
 
     public string username { get; set; }
@@ -26,9 +35,13 @@ public partial class user
 
     public string email { get; set; }
 
-    public string image { get; set; }
-
     public string password1 { get; set; }
+
+
+
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+
+    public virtual ICollection<like> likes { get; set; }
 
 }
 

@@ -11,7 +11,7 @@
 @section homeCss {
   <link rel="stylesheet" href="~/Public/css/cizgi.css">
   <link rel='stylesheet' id='layerslider-css' href="~/Public/css/layerslider.css" type='text/css' media='all' />
-
+    
 }
 
 <div class="main">
@@ -36,8 +36,8 @@
                              src="~/Public/images/layerslider-gallery/life.png" alt="">
                         <img class="ls-l" style="top:355px;left:518px;white-space: nowrap;" data-ls="delayin:2500;parallaxlevel:-2;" src="~/Public/images/layerslider-gallery/cup-divider.png"
                              alt="">
-                        <img class="ls-l" style="top:405px;left:509px;white-space: nowrap;" data-ls="offsetxin:0;offsetyin:-100;delayin:3000;offsetxout:0;offsetyout:100;parallaxlevel:3;"
-                             src="~/Public/images/layerslider-gallery/a-trendy-kids.png" alt="">
+                        @*<img class="ls-l" style="top:405px;left:509px;white-space: nowrap;" data-ls="offsetxin:0;offsetyin:-100;delayin:3000;offsetxout:0;offsetyout:100;parallaxlevel:3;"
+                             src="~/Public/images/layerslider-gallery/a-trendy-kids.png" alt="">*@
                         <!--<img class="ls-l" style="top:220px;left:370px;white-space: nowrap;" data-ls="offsetxin:0;offsetyin:150;delayin:2000;easingin:swing;offsetxout:0;offsetyout:-150;parallaxlevel:3;"
                     src="~/Public/images/layerslider-gallery/bg2.png" alt="">-->
                         <img class="ls-l" style="top:42px;left:173px;white-space: nowrap;" data-ls="offsetxin:0;offsetyin:150;delayin:2200;easingin:easeInOutBack;offsetxout:0;offsetyout:-150;parallaxlevel:-4;"
@@ -82,12 +82,12 @@
                              src="~/Public/images/layerslider-gallery/boom.png" alt="">
                         <img class="ls-l" style="top:247px;left:731px;white-space: nowrap;" data-ls="offsetxin:0;delayin:1000;rotateyin:180;scalexin:3;scaleyin:3;offsetxout:0;parallaxlevel:-2;"
                              src="~/Public/images/layerslider-gallery/awesome-gallery.png" alt="">
-                        <img class="ls-l" style="top:259px;left:888px;white-space: nowrap;" data-ls="offsetxin:0;delayin:1500;rotateyin:90;scalexin:3;scaleyin:3;offsetxout:0;parallaxlevel:4;"
-                             src="~/Public/images/layerslider-gallery/parallax-bg.png" alt="">
+                        @*<img class="ls-l" style="top:259px;left:888px;white-space: nowrap;" data-ls="offsetxin:0;delayin:1500;rotateyin:90;scalexin:3;scaleyin:3;offsetxout:0;parallaxlevel:4;"
+                             src="~/Public/images/layerslider-gallery/parallax-bg.png" alt="">*@
                         <img class="ls-l" style="top:402px;left:758px;white-space: nowrap;" data-ls="offsetxin:0;delayin:2000;rotateyin:100;scalexin:3;scaleyin:3;offsetxout:0;parallaxlevel:3;"
                              src="~/Public/images/layerslider-gallery/creative-design.png" alt="">
-                        <img class="ls-l" style="top:411px;left:935px;white-space: nowrap;" data-ls="offsetxin:0;delayin:1700;rotateyin:120;scalexin:3;scaleyin:3;offsetxout:0;parallaxlevel:2;"
-                             src="~/Public/images/layerslider-gallery/mega-menu.png" alt="">
+                        @*<img class="ls-l" style="top:411px;left:935px;white-space: nowrap;" data-ls="offsetxin:0;delayin:1700;rotateyin:120;scalexin:3;scaleyin:3;offsetxout:0;parallaxlevel:2;"
+                             src="~/Public/images/layerslider-gallery/mega-menu.png" alt="">*@
                         <img class="ls-l" style="top:15px;left:1095px;transform:rotate(100deg); -ms-transform:rotate(100deg); /* IE 9 */ -webkit-transform:rotate(100deg); /* Opera, Chrome, and Safari */ ;white-space: nowrap;"
                              data-ls="offsetxin:0;delayin:700;parallaxlevel:4;" src="~/Public/images/layerslider-gallery/common-swirl.png"
                              alt="">
@@ -131,44 +131,46 @@
             <section id="primary" class="content-full-width" style="clear:both">
                 <!--container starts-->
                 <div class="container">
-
-                    <div class="dt-sc-one-fourth column first" style="margin-bottom: 70px;">
-                        <div class="dt-sc-ico-content type1">
-                            <div class="icon">
-                                <span class="icon-outer">
-                                    <img src="~/Public/images/service1.jpg" alt="" title="">
-                                    <span class="infolayer">
-                                        <a href="#"><i class="fa fa-link"></i></a>
+                    @foreach (name n in Model.names)
+                    {
+                        <div class="dt-sc-one-fourth column first" style="margin-bottom: 70px;">
+                            <div class="dt-sc-ico-content type1">
+                                <div class="icon">
+                                    <span class="icon-outer">
+                                        <img src="~/Public/images/service1.jpg" alt="" title="">
+                                        <span class="infolayer">
+                                            <a href="#"><i class="fa fa-link"></i></a>
+                                        </span>
                                     </span>
-                                </span>
+                                </div>
+                                <h4><a href="#"></a>@n.name1</h4>
+                                <p>
+                                   @n.decription.Substring(0, Math.Min(n.decription.Length, 20))...
+                                </p>
                             </div>
-                            <h4><a href="#">Adel</a></h4>
-                            <p>
-                                Curabitur ultrices posuere mattis. Nam ullamcorper, diam sit amet euismod pelleo ntesque, eros
-                                risus rhoncus libero, invest tibulum nisl ligula
-                            </p>
                         </div>
-                    </div>
+                    }
+               
 
-                    <div class="dt-sc-one-fourth column">
+                    @*<div class="dt-sc-one-fourth column">
                         <div class="dt-sc-ico-content type1">
                             <div class="icon">
-                                <span class="icon-outer">
+                                <span class="icon-outer
                                     <img src="~/Public/images/service2.jpg" alt="" title="">
                                     <span class="infolayer">
                                         <a href="#"><i class="fa fa-link"></i></a>
                                     </span>
                                 </span>
                             </div>
-                            <h4><a href="#">Sanam</a></h4>
+                            <h4><a href="#">Sənəm</a></h4>
                             <p>
                                 Decor ostdcaer urabitur ultrices posuere mattis. Nam ullamcorper, diam sit amet euismod pelleontesque,
                                 eros risus rhoncus libero, invest tibulum nisl ligula
                             </p>
                         </div>
-                    </div>
+                    </div>*@
 
-                    <div class="dt-sc-one-fourth column">
+                    @*<div class="dt-sc-one-fourth column">
                         <div class="dt-sc-ico-content type1">
                             <div class="icon">
                                 <span class="icon-outer">
@@ -184,9 +186,9 @@
                                 rhoncus libero, invest tibulum nisl gedretu osterftra ligula
                             </p>
                         </div>
-                    </div>
+                    </div>*@
 
-                    <div class="dt-sc-one-fourth column">
+                    @*<div class="dt-sc-one-fourth column">
                         <div class="dt-sc-ico-content type1">
                             <div class="icon">
                                 <span class="icon-outer">
@@ -194,15 +196,15 @@
                                     <span class="infolayer">
                                         <a href="#"><i class="fa fa-link"></i></a>
                                     </span>
-                                </span>
+                                </span>s
                             </div>
-                            <h4><a href="#">Lala</a></h4>
+                            <h4><a href="#">Lalə</a></h4>
                             <p>
                                 Curabitur ultrices posuere mattis. Nam ullamcorper, diam sit amet euismod pelleo ntesque, eros
                                 risus rhoncus libero, invest tibulum nisl ligula
                             </p>
                         </div>
-                    </div>
+                    </div>*@
 
                 </div>
                 <!--container ends-->
@@ -221,7 +223,7 @@
                                     <div class="icon">
                                         <span class="fa fa-glass"> </span>
                                     </div>
-                                    <h4><a href="#" target="_blank"> Adlar </a></h4>
+                                    <h4><a href="@Url.Action("index","Letters")" target="_blank"> Adlar </a></h4>
                                     <p>
                                         Nam ullamcorper, diam sit amet euismod pelleontesque, eros risus rhoncus libero, inst
                                         tibulum nisl ligula....
@@ -232,7 +234,7 @@
                                     <div class="icon">
                                         <span class="fa fa-pencil"> </span>
                                     </div>
-                                    <h4><a href="#" target="_blank"> Tehsil </a></h4>
+                                    <h4><a href="@Url.Action("index","education")" target="_blank"> Tehsil </a></h4>
                                     <p>
                                         Nam ullamcorper, diam sit amet euismod pelleontesque, eros risus rhoncus libero, inst
                                         tibulum nisl ligula....
@@ -243,7 +245,7 @@
                                     <div class="icon">
                                         <span class="fa fa-bullseye"> </span>
                                     </div>
-                                    <h4><a href="#" target="_blank"> Saglamliq </a></h4>
+                                    <h4><a href="@Url.Action("index","health")" target="_blank"> Saglamliq </a></h4>
                                     <p>
                                         Nam ullamcorper, diam sit amet euismod pelleontesque, eros risus rhoncus libero, inst
                                         tibulum nisl ligula....
@@ -259,7 +261,7 @@
                                     <div class="icon">
                                         <span class="fa fa-tachometer"> </span>
                                     </div>
-                                    <h4><a href="#" target="_blank"> Idman </a></h4>
+                                    <h4><a href="@Url.Action("index","gym")" target="_blank"> Idman </a></h4>
                                     <p>
                                         Nam ullamcorper, diam sit amet euismod pelleontesque, eros risus rhoncus libero, inst
                                         tibulum nisl ligula....
@@ -270,7 +272,7 @@
                                     <div class="icon">
                                         <span class="fa fa-magic"> </span>
                                     </div>
-                                    <h4><a href="#" target="_blank"> Qida </a></h4>
+                                    <h4><a href="@Url.Action("index","food")" target="_blank"> Qida </a></h4>
                                     <p>
                                         Nam ullamcorper, diam sit amet euismod pelleontesque, eros risus rhoncus libero, inst
                                         tibulum nisl ligula....
@@ -281,9 +283,9 @@
                                     <div class="icon">
                                         <span class="fa fa-music"> </span>
                                     </div>
-                                    <h4><a href="#" target="_blank"> Cizgi Filmler </a></h4>
+                                    <h4><a href="@Url.Action("index","education")" target="_blank"> Cizgi Filmler </a></h4>
                                     <p>
-                                        Nam ullamcorper, diam sit amet euismod pelleontesque, eros risus rhoncus libero, inst
+                                        Namə ullamcorəper, diəam siət amet euismod pelleontesque, eros risus rhoncus libero, inst
                                         tibulum nisl ligula....
                                     </p>
                                 </div>
@@ -294,7 +296,7 @@
                         <!--dt-sc-one-half ends-->
                         <!--dt-sc-one-half starts-->
                         <div class="dt-sc-one-half column">
-                            <h2>Usaqlar Bizim Geleceyimizdir!</h2>
+                            <h2>Uşaqlar Bizim Gələcəyimizdir!</h2>
                             <div class="add-slider-wrapper">
                                 <ul class="add-slider">
                                     <li> <img src="~/Public/images/add1.jpg" alt="" title=""> </li>
@@ -342,30 +344,34 @@
                 <section class="fullwidth-background dt-sc-parallax-section orange-bg" style="clear:both;">
                     <!--container starts-->
                     <div class="container">
-                        <h2 class="dt-sc-hr-white-title text-center">Meqaleler</h2>
-                        <div class="column dt-sc-one-half first">
-                            <article class="blog-entry">
-                                <div class="blog-entry-inner">
-                                    <div class="entry-thumb">
-                                        <a href="blog-detail.html"><img src="~/Public/images/blog_img1.jpg" alt="" title=""></a>
-                                    </div>
-                                    <div class="entry-details">
-                                        <div class="entry-title">
-                                            <h3><a href="blog-detail.html"> Activities Improves Mind </a></h3>
+                        <h2 class="dt-sc-hr-white-title text-center">Məqalələr</h2>
+                        @foreach (blog blg in Model.blogs)
+                        {
+                            <div class="column dt-sc-one-half first">
+                                <article class="blog-entry">
+                                    <div class="blog-entry-inner">
+                                        <div class="entry-thumb">
+                                            <a href="blog-detail.html"><img src="~/Uploads/@blg.photo" alt="" title=""></a>
                                         </div>
-                                        <!--entry-metadata ends-->
-                                        <div class="entry-body">
-                                            <p>
-                                                Roin bibendum nibhsds. Nuncsdsd fermdada msit ametadasd consequat. Praes porr
-                                                nulla sit amet dui lobortis, id venenatis nibh accums.
-                                            </p>
+                                        <div class="entry-details">
+                                            <div class="entry-title">
+                                                <h3><a href="blog-detail.html"> @blg.title </a></h3>
+                                            </div>
+                                            <!--entry-metadata ends-->
+                                            <div class="entry-body">
+                                                <p>
+                                                   @blg.text.Substring(0,Math.Min(blg.text.Length,100))...
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </article>
-                        </div>
+                                </article>
+                            </div>
+                        }
+             
+
                         <!--dt-sc-one-half ends-->
-                        <div class="column dt-sc-one-half">
+                        @*<div class="column dt-sc-one-half">
                             <article class="blog-entry">
                                 <div class="blog-entry-inner">
                                     <div class="entry-thumb">
@@ -375,7 +381,7 @@
                                         <div class="entry-title">
                                             <h3><a href="blog-detail.html"> Weekly Reader Zone </a></h3>
                                         </div>
-                                        <!--entry-metadata ends-->
+                                        entry-metadata ends
                                         <div class="entry-body">
                                             <p>
                                                 Iid venenatis nibh accums. Doinbibe ndum nibhsds. Nuncsdsd fermdada msit ametadasd
@@ -385,7 +391,7 @@
                                     </div>
                                 </div>
                             </article>
-                        </div>
+                        </div>*@
                         <!--dt-sc-one-half ends-->
                     </div>
                     <!--container ends-->

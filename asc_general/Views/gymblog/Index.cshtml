@@ -3,10 +3,12 @@
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
+    string FB = "http://localhost:59178/Complex/Index/" + Model.gym_blog.id;
 }
 
 @section cizgiCss{
     <link rel="stylesheet" href="~/Public/css/cizgi.css">
+<link rel="stylesheet" href="~/Public/css/gymblog.css">
 }
 <div class="wrapper">
     <!--pepe content starts-->
@@ -15,11 +17,11 @@
         <!--breadcrumb-section starts-->
         <div class="breadcrumb-section" style="background:#c8e5f1;">
             <div class="container">
-                <h1 style="color: #2a2eec;">@Model.gym_blog.title</h1>
+                <h1 style="color: #4CBCD4;">@Model.gym_blog.title</h1>
                 <div class="breadcrumb">
-                    <a href="@Url.Action("index","home")" style="color: #2a2eec;">Home</a>
+                    <a href="@Url.Action("index","home")" style="color: #4CBCD4;">Home</a>
                     <span class="fa fa-angle-double-right"></span>
-                    <span class="current dark-purple" style="color: #2a2eec;">@Model.gym_blog.title</span>
+                    <span class="current" style="color: #4CBCD4;">@Model.gym_blog.title</span>
                 </div>
             </div>
         </div>
@@ -38,7 +40,7 @@
                                 </div>
                                 <div class="entry-details">
                                     <div class="entry-title">
-                                        <h3><a href="#"style="color: #2a2eec;">@Model.gym_blog.title </a></h3>
+                                        <h3><a href="#"style="color: #4CBCD4;">@Model.gym_blog.title </a></h3>
                                     </div>
                                     <!--entry-metadata ends-->
                                     <div class="entry-body">
@@ -47,12 +49,48 @@
                                         </p>
                                     </div>
 
+                                    @if (Session["user"] != null)
+                                    {
+                                        <div class="fb-comments" data-href="@FB" data-numposts="1" data-width="750"></div>
+                                    }
+
+
                                 </div>
                             </div>
+                            <iframe width="450" height="320" src="https://www.youtube.com/embed/@Model.gym_blog.video_url"
+                                    class="iiframe_margin pepemargin" frameborder="0" allowfullscreen></iframe>
                         </article>
                     </div>
-                    <iframe width="560" height="315" src="@Model.gym_blog.video_url"
-                            class="pepemargin" frameborder="0" allowfullscreen></iframe>
+                  
+
+
+                    <!--  Strat Blog Right Sidber -->
+                    <div class="col-sm-12 col-md-3 float-right">
+                        <div class="blog-sidber">
+                            <div class="clearfix"></div>
+                            <!-- End Search Form-->
+                            <div class="recent-post">
+                                <div class="sections">
+                                    <h2>Digərləri</h2>
+                                </div>
+                                <ul class="recent-post-list list-inline">
+                                    @foreach (gym_blog g in Model.other_sports)
+                                    {
+                                        <li>
+                                            <a href="@Url.Action("index","gymblog",new { id =g.id})"><img src="~/Uploads/@g.photo" class="img-responsive" alt="blog01"></a>
+                                            <h6><a class="color-black" href="@Url.Action("index","gymblog",new { id =g.id})">@g.title </a></h6>
+                                        </li>
+                                    }
+
+
+                                </ul>
+                            </div>
+                            <div class="clearfix"></div>
+                            <!-- End Recent Post -->
+
+
+                        </div>
+                    </div><!-- End Left Left Sidber -->
 
 
                 </section>
@@ -65,4 +103,14 @@
     <!--pepe content ends-->
 
 </div>
+<div id="fb-root"></div>
+<script>
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
 

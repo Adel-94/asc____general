@@ -31,8 +31,8 @@ jQuery(document).ready(function($){
 	$("#dt-menu-toggle").click(function( event ){
 		event.preventDefault();
 		var $menu = $("nav#main-menu").find("ul.menu:first");
-		$menu.slideToggle(function(){
-			$menu.css('overflow' , 'visible');
+        $menu.slideToggle(function () {
+            $menu.css('overflow', 'visible');
 			$menu.toggleClass('menu-toggle-open');
 		});
 	});
@@ -133,7 +133,7 @@ jQuery(document).ready(function($){
 			},
 			function(){
 				if( $(this).find(".megamenu-child-container").length ){
-					$(this).find(".megamenu-child-container").stop(true, true).hide();
+					$(this).find(".megamenu-child-container").stop(true, true).hide(); 
 				} else {
 					$(this).find('> ul.sub-menu').stop(true, true).hide(); 
 				}

@@ -28,7 +28,7 @@
 /*-------------------------------------------------------*/
 
 body {
-    font-family: 'ALBOROTO';
+    font-family: 'Fry Pro';
 }
 /* fallback */
 
@@ -40,7 +40,7 @@ body {
 }*/
 
 
-@font-face {
+/*@font-face {
     font-family: ALBOROTO;
     src: url('~/Public/fonts/ALBOROTO.otf');
 }
@@ -49,7 +49,7 @@ body {
     font-family: ComicSans;
     font-weight: bold;
     src: url('~/Public/fonts/comic-unipro-bd.ttf');
-}
+}*/
 
 @font-face {
     font-family: FryPro;

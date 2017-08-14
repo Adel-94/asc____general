@@ -282,7 +282,7 @@ header ul.dt-sc-social-icons li a.gplus span{border-color:#d53e2b; background:#d
 	
 #main-menu > ul.menu > li{margin:0px; padding:0px; margin:0px; display:inline; float:left; position:relative; background:#FFFFFF;font-family:'Fry Pro';f}
 	
-#main-menu > ul.menu > li > a{display:block; padding:0px 15px; margin:0px; text-transform:uppercase; line-height:65px; color:#646a82; position:relative; margin-top:-5px; border-top:5px solid #ebebeb;text-decoration: none;}
+#main-menu > ul.menu > li > a{display:block; padding:0px 15px; margin:0px; text-transform:uppercase; line-height:65px; color:#646a82; position:relative; margin-top:-5px; border-top:5px solid;text-decoration: none;}
 
 #main-menu > ul.menu > li:first-child > a{padding-left:10px;}
 
@@ -1303,12 +1303,12 @@ footer .fa-envelope, footer .fa-phone, footer .fa-map-marker {
     color: #646a82;
     font-size: 17px;
     padding: 23px 5px 20px 10px;
-    width: 152px;
+    width: 153px;
     border: none;
     border-top: 5px solid #646a82;
     box-shadow: none;
     border-radius: 0;
-    margin-right: -3px;
+    margin-right: -4px;
 }
 
 .search_tool input:focus {
@@ -1362,6 +1362,7 @@ footer .fa-envelope, footer .fa-phone, footer .fa-map-marker {
 }
 
 #searchingResult li a p {
+    font-family: 'Fry Pro';
     color: #646A82;
     padding: 10px;
     height: 42px;
@@ -1414,6 +1415,10 @@ footer aside h3 {
     .contact .contact_info p {
         font-size: 13px !important;
     }
+
+    .search_tool input {
+        padding: 24px 5px 19px 10px;
+    }
 }
 
 @media only screen and (max-width: 767px) {
@@ -1439,7 +1444,7 @@ footer aside h3 {
 
 @media only screen and (max-width: 319px) {
     #icons {
-        margin: 44px -15px 0px 0px !important;
+        margin: 43px -15px 0px 0px !important;
     }
 }
 
@@ -1459,12 +1464,12 @@ footer aside h3 {
 
     .formSearch .search_tool {
         position: absolute !important;
-        top: 39px;
-        left: 91px;
+        top: 38px;
+        left: 88px;
     }
 
     .search_tool input {
-        width: 160px;
+        width: 165px;
         padding: 21px 5px 17px 10px;
     }
 
@@ -1473,13 +1478,13 @@ footer aside h3 {
     }
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 479px) {
     .formSearch .search_tool {
-        left: 26px !important;
+        left: 23px !important;
     }
 }
 
-@media only screen and (max-width: 319px) {
+@media only screen and (max-width: 319px) { 
     #icons li {
         float: left !important;
     }
@@ -1498,5 +1503,40 @@ footer aside h3 {
 
     #searchingResult li a p {
         height: unset !important;
+    }
+}
+#main-menu > ul.menu > li.current_page_item > a, #main-menu > ul.menu > li a:hover, #main-menu ul.menu ul.sub-menu li.current_page_item > a {
+    color: #646a82;
+}
+#menu-main-menu li:nth-child(1).active a {
+    color: #f27b81 !important;
+}
+#menu-main-menu li:nth-child(2).active a {
+    color: #f7c44e;
+}
+#menu-main-menu li:nth-child(3).active a {
+    color: #fce480;
+}
+#menu-main-menu li:nth-child(4).active a {
+    color: #4cbcd4;
+}
+
+#menu-main-menu li:nth-child(5).active a {
+    color: #4c7297;
+}
+
+#menu-main-menu li:nth-child(6).active a {
+    color: #b0b6fb;
+}
+#menu-main-menu li:nth-child(7).active a {
+    color: #dd72b3;
+}
+.current_page_item a {
+    border-color: #f27b81 !important;
+}
+
+@media only screen and (min-width: 768px) {
+    #menu-main-menu {
+        display:block !important;
     }
 }

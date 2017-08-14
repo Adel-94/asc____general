@@ -1127,18 +1127,20 @@ a {
     color: #FFF;
     box-sizing: border-box;
     background-clip: padding-box;
-    border: none;
+    border: 10px solid transparent;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
     transform: translateY(100%);
-
 }
 .blog .blog-box .blog-post .image {
     border-top-left-radius: 5%;
     border-top-right-radius: 5%;
 }
 
-.blog .blog-box .blog-post .image:hover .overly {
-    transform: translateY(0%);
-}
+    .blog .blog-box .blog-post .image:hover .overly {
+        transform: translateY(0%);
+
+    }
 
 .blog .blog-post .contents-box {
     margin-top: 10px;

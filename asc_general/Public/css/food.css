@@ -922,6 +922,10 @@ a {
 
 /*ABout Food*/
 
+.section-padding-top {
+    padding: 50px 0 40px;
+}
+
 .about-food {
    padding:50px 0;
 }
@@ -936,6 +940,11 @@ a {
 
     .about-food span {
         color: #f32a2a;
+        display: block;
+        font-size: 28px;
+        margin: 10px 0 0;
+        font-weight: normal;
+        text-transform: uppercase;
     }
 
 

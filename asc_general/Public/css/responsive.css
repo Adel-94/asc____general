@@ -1,4 +1,4 @@
-@charset "utf-8";
+﻿@charset "utf-8";
 /* CSS Document */
 /*----*****---- << Desktop >> ----*****----*/	
 /* Note: Design for a width of 768px, Gutter: 30px, Unit: 32px */
@@ -385,7 +385,7 @@ header .contact-details p{text-align:center; margin:0px 0px 15px;}
 
 .megamenu-4-columns-group .megamenu-child-container{left:0px !important; width:420px;}
 
-#menu-container ul.dt-sc-social-icons{float:none; width:100%; text-align:center; margin:44px 0px 0px;}
+#menu-container ul.dt-sc-social-icons{float:none; width:100%; text-align:center; margin:43px 0px 0px;}
 
 header ul.dt-sc-social-icons li{display:inline-block; float:none;}
 
@@ -501,7 +501,7 @@ header .contact-details p{text-align:center; margin:0px 0px 15px;}
 
 #menu-container{position:static;}
 
-#menu-container ul.dt-sc-social-icons{float:none; width:100%; text-align:center; margin:44px 0px 0px;}
+#menu-container ul.dt-sc-social-icons{float:none; width:100%; text-align:center; margin:43px 0px 0px;}
 
 .dt-menu-toggle{display:block;margin-right: 30px;}
 
@@ -537,7 +537,7 @@ header .contact-details p{text-align:center; margin:0px 0px 15px;}
 
 #menu-container{height:auto;}
 
-#main-menu ul.menu > li, #main-menu ul.menu > li > ul.sub-menu > li, #main-menu ul.menu .megamenu-child-container > ul.sub-menu > li{width:100%; padding:0px; text-align:left; clear:both;}
+#main-menu ul.menu > li, #main-menu ul.menu > li > ul.sub-menu > li, #main-menu ul.menu .megamenu-child-container > ul.sub-menu > li{width:90%; padding:0px; text-align:left; clear:both;}
 
 #main-menu{width:inherit; position:absolute;}
 

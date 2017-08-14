@@ -88,25 +88,25 @@
                     <nav id="main-menu">
                         <div class="dt-menu-toggle" id="dt-menu-toggle">Menu<span class="dt-menu-toggle-icon"></span></div>
                         <ul id="menu-main-menu" class="menu">
-                            <li class="current_page_item  red">
+                            <li class="current_page_item @ViewBag.home">
                                 @Html.ActionLink("Ana Səhifə", "Index", "Home")
                             </li>
-                            <li class="mustard">
+                            <li class="mustard @ViewBag.letter">
                                 @Html.ActionLink("Adlar", "Index", "Letters")
                             </li>
-                            <li class="yellow">
+                            <li class="yellow @ViewBag.cartoon">
                                @Html.ActionLink("Cizgi Filmlər", "Index", "Cartoon")
                             </li>
-                            <li class="blue">
+                            <li class="blue @ViewBag.gym">
                                @Html.ActionLink("Idman", "Index", "gym")
                             </li>
-                            <li class="steelblue">
+                            <li class="steelblue @ViewBag.food">
                                 @Html.ActionLink("Qida", "Index", "Food")
                             </li>
-                            <li class="lavender">
+                            <li class="lavender @ViewBag.education">
                                 @Html.ActionLink("Təhsil", "Index", "Education")
                             </li>
-                            <li class="purple">
+                            <li class="purple @ViewBag.health">
                                 @Html.ActionLink("Sağlamlıq", "Index", "Health")
                             </li>
                         </ul>

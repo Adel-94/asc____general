@@ -1,4 +1,11 @@
 jQuery(document).ready(function ($) {
+    //add active class
+    $("#main-menu").find("li").eq(3).mousemove(function () {
+        console.log("yeap")
+        $(this).toggleClass("myred");
+    });
+
+
     //menu searching starts
     var clickNumber = 0;
     var searchString = "";

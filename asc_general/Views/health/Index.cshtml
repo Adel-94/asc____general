@@ -3,6 +3,7 @@
 @model dynamic 
 @{
     ViewBag.Title = "Index";
+    ViewBag.health = "active";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 @section healthCss{
@@ -24,9 +25,9 @@
 
 
 <!--<link href="css/themify-icons.css" rel="stylesheet" type="text/css">-->
-<link href="~/Public/css/bootstrap.css" rel="stylesheet" type="text/css">
+@*<link href="~/Public/css/bootstrap.css" rel="stylesheet" type="text/css"> iki dene bootstrap ne vaxtdan qosulurask  *@ 
 <link href="~/Public/css/slick.css" rel="stylesheet" type="text/css">
-<link href="~/Public/css/health.css" rel="stylesheet" type="text/css">
+@*<link href="~/Public/css/health.css" rel="stylesheet" type="text/css">*@
 @*<link href="~/Public/css/gym.css" rel="stylesheet" type="text/css">*@
 <link rel="stylesheet" href="~/Public/css/food.css">
 <link rel="stylesheet" href="~/Public/css/stylel.css">
@@ -40,7 +41,7 @@
         <div class="row">
             <div class="col-sm-12">
                 <div class="heading-container">
-                    <h3 style="color:#74a534;">Sağlamlıq haqqında.</h3>
+                    <h3>Sağlamlıq haqqında</h3>
                     <span class="partition"></span>
              
                 </div>
@@ -80,7 +81,6 @@
             <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
                 <div class="section-title padding-bottom-50 text-center">
                     <h4 class="color-flamingo"> Ən yeni Məqalələr </h4>
-                    <h2 class="color-black">latest News</h2>
                 </div>
             </div>
         </div>

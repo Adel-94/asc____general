@@ -445,8 +445,8 @@ iframe {
 
     .heading-container h6 {
         color: #4CBCD4;
-        font-family: 'Nova Flat';
-        font-size: 20px;
+        font-family: 'Fry Pro';
+        font-size: 24px;
         font-weight: bold;
         position: relative;
         margin-bottom: 10px;
@@ -470,14 +470,14 @@ iframe {
     vertical-align: top;
 }
 
-    .partition:before {
+    /*.partition:before {
         content: '';
         display: inline-block;
         vertical-align: top;
         width: 40px;
         background: #d1d1d1;
         height: 1px;
-    }
+    }*/
 /* ================= Stats Section start ================= */
 .stats-container {
     padding: 150px 0;

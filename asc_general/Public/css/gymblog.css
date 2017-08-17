@@ -22,3 +22,13 @@
         color: #4CBCD4;
         text-decoration: none;
     }
+.prevnext a {
+    color: #5c5c5c;
+    font-size: 25px;
+    margin-left: 5px;
+}
+.prevnext a:hover {
+    color: #5c5c5c;
+    text-decoration:none;
+    font-size: 20px;
+}

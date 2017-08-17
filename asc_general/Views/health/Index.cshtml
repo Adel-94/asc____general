@@ -192,9 +192,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <h4>@item.name</h4>
+                            <h4 style="font-size:19px;">@item.name</h4>
                             <h6>@item.profession</h6>
-                            <p style="height:75px; overflow:hidden">@item.text_about</p>
+                            <p class="text-muted">@item.text_about.Substring(0, Math.Min(item.text_about.Length, 40))....</p>
                         </div>
                     </div>
                 }

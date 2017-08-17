@@ -438,6 +438,7 @@
     <Content Include="Public\bower_components\jquery\src\wrap.js" />
     <Content Include="Public\css\admin.css" />
     <Content Include="Public\css\allcomplex.css" />
+    <Content Include="Public\css\allrecepts.css" />
     <Content Include="Public\css\animate.min.css" />
     <Content Include="Public\css\blank.html" />
     <Content Include="Public\css\bootstrap.css" />

@@ -59,6 +59,18 @@
                             </div>
                             <iframe width="500" height="400" src="https://www.youtube.com/embed/@Model.cartoon_blog.video_url"
                                     class="pepemargin" frameborder="0" allowfullscreen></iframe>
+                            <div class="text-center prevnext">
+                                @if (Model.prev != null)
+                                {
+
+                                    <a href="@Url.Action("index","cartoon_blog",new { id = Model.prev.id })"><i class="fa fa-angle-double-left" aria-hidden="true"></i>Öncə</a>
+                                }
+                                @if (Model.next != null)
+                                {
+
+                                    <a href="@Url.Action("index","cartoon_blog",new { id = Model.next.id })">Sonra <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                                }
+                            </div>
                         </article>
                     </div>
 
@@ -72,7 +84,7 @@
                             <!-- End Search Form-->
                             <div class="recent-post">
                                 <div class="sections">
-                                    <h2>Digər Məqalələr</h2>
+                                    <h2>Digər Cizgi Filmlər</h2>
                                 </div>
                                 <ul class="recent-post-list list-inline">
                                     @foreach (cartoon ct in Model.othercartoons)

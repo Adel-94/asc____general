@@ -59,7 +59,20 @@
                             </div>
                             <iframe width="450" height="320" src="https://www.youtube.com/embed/@Model.gym_blog.video_url"
                                     class="iiframe_margin pepemargin" frameborder="0" allowfullscreen></iframe>
+                            <div class="text-center prevnext">
+                                @if (Model.prev != null)
+                                {
+
+                                    <a href="@Url.Action("index","gymblog",new { id = Model.prev.id })"><i class="fa fa-angle-double-left" aria-hidden="true"></i>Öncə</a>
+                                }
+                                @if (Model.next != null)
+                                {
+
+                                    <a href="@Url.Action("index","gymblog",new { id = Model.next.id })">Sonra <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                                }
+                            </div>
                         </article>
+              
                     </div>
                   
 

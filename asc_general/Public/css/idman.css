@@ -1331,7 +1331,12 @@ footer ul.social-links {
 /* ============================= */
 /* ! Layout for mobile(portrait) version   */
 /* ============================= */
-@media only screen and (max-width: 479px) {
+@media only screen and (max-width: 491px) {
+
+    .main-heading strong {
+      
+        margin-top: 20px;
+    }
 }
 
 body {
@@ -1380,11 +1385,12 @@ div.trainer-box {
 
 .main-heading strong {
     color: #4CBCD4;
+    
 }
 
 .main-heading span {
     color: #4CBCD4;
-    margin-top: 0;
+    margin-top: 10px;
 }
 
 #about {

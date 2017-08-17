@@ -13,6 +13,7 @@
 }
 .pepemargin {
     margin-left: 118px;
+    margin-top: 30px;
 }
 .entry-title {
     margin-top: 25px;
@@ -60,11 +61,6 @@
             text-decoration: none;
         }
 
-
-/*@media only screen and (max-width: 991px) {
-    .recent-post {
-        position: relative;
-    }*/
 
     /*for cartoon*/
     #hexGrid {
@@ -145,7 +141,7 @@
         -webkit-transition: -webkit-transform .2s ease-out, opacity .3s ease-out;
         transition: transform .2s ease-out, opacity .3s ease-out;
     }
-
+    
     .hex h1 {
         bottom: 39%;
         padding-top: 50%;
@@ -185,6 +181,11 @@
         .hex {
             width: 20%; /* = 100 / 5 */
         }
+            .hex h1 {
+                bottom: 34%;
+                font-size: 18px;
+                line-height: 14px;
+            }
 
             .hex:nth-child(9n+6) { /* first hexagon of even rows */
                 margin-left: 10%; /* = width of .hex / 2  to indent even rows */
@@ -235,13 +236,84 @@
             .hex:nth-child(3n+3) { /* first hexagon of even rows */
                 margin-left: 25%; /* = width of .hex / 2  to indent even rows */
             }
+        .pepemargin {
+            margin-left: 14px;
+        }
+
     }
 
     @media (max-width: 400px) {
         #hexGrid {
             font-size: 13px;
         }
+        .hex h1 {
+            bottom: 34%;
+            font-size: 18px;
+            line-height: 14px;
+        }
     }
+@media (min-width: 400px) and (max-width:491px) {
+    .hex h1 {
+        bottom: 34%;
+        font-size: 15px;
+        line-height: 14px;
+    }
+}
+@media (min-width: 600px) and (max-width:768px) {
+
+
+    .hex h1 {
+        bottom: 34%;
+        font-size: 16px;
+        line-height: 14px;
+    }
+}
+@media (min-width: 891px)  {
+
+
+    .hex h1 {
+        bottom: 34%;
+        font-size: 16px;
+        line-height: 14px;
+    }
+}
+
+@media (min-width: 960px) {
+
+
+    .hex h1 {
+        bottom: 41%;
+        font-size: 18px;
+        line-height: 14px;
+    }
+}
+
 
 
     /*for cartoon*/
+
+ .prevnext {
+     margin-top:35px;
+ }
+    .prevnext a {
+        color: #5c5c5c;
+        font-size: 25px;
+        margin-left: 5px;
+    }
+
+    .prevnext a:hover {
+        color: #8c097b;
+        text-decoration: none;
+        font-size: 20px;
+    }
+
+
+@media (max-width: 316px) {
+   
+
+    .hex h1 {
+        bottom: 27%;
+        font-size: 13px;
+        line-height: 12px;
+    }
+}

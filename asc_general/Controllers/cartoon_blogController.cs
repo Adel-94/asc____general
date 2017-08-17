@@ -23,6 +23,8 @@ namespace asc_general.Controllers
             cartoon cartoon_id = db.cartoons.Find(id);
             mymodel.cartoon_blog = cartoon_id;
             mymodel.othercartoons = db.cartoons.Where(o => o.id != cartoon_id.id).ToList();
+            mymodel.next = db.blogs.FirstOrDefault(n => n.id > cartoon_id.id);
+            mymodel.prev = db.blogs.OrderByDescending(x => x.id).FirstOrDefault(p => p.id < cartoon_id.id);
             return View(mymodel);
         }
 

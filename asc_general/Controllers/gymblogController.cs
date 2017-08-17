@@ -23,6 +23,8 @@ namespace asc_general.Controllers
             gym_blog gym_id = db.gym_blog.Find(id);
             mymodel.gym_blog = gym_id;
             mymodel.other_sports = db.gym_blog.Where(s => s.id != gym_id.id).ToList();
+            mymodel.next = db.blogs.FirstOrDefault(n => n.id > gym_id.id);
+            mymodel.prev = db.blogs.OrderByDescending(x => x.id).FirstOrDefault(p => p.id < gym_id.id);
             return View(mymodel);
         }
     }

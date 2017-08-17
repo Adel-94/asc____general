@@ -82,7 +82,8 @@ namespace asc_general.Controllers
                 user usr = db.users.FirstOrDefault(u => u.email == user.email);
                 if (usr == null)
                 {
-                    //user.password = Crypto.Hash(user.password, "MD5");
+                    user.password = Crypto.Hash(user.password, "MD5");
+                    user.password1 = Crypto.Hash(user.password, "MD5");
                     db.users.Add(user);
                     db.SaveChanges();
 

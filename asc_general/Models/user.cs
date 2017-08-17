@@ -14,8 +14,9 @@ namespace asc_general.Models
 
 using System;
     using System.Collections.Generic;
-    
-public partial class user
+    using System.ComponentModel.DataAnnotations;
+
+    public partial class user
 {
 
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -31,11 +32,12 @@ public partial class user
 
     public string username { get; set; }
 
-    public string password { get; set; }
+        //[ScaffoldColumn(false)]
+        public string password { get; set; }
 
     public string email { get; set; }
-
-    public string password1 { get; set; }
+        //[ScaffoldColumn(false)]
+        public string password1 { get; set; }
 
 
 

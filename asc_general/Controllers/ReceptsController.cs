@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using asc_general.Models;
 using System.Dynamic;
 using System.Net;
+using PagedList;
 
 namespace asc_general.Controllers
 {
@@ -31,17 +32,20 @@ namespace asc_general.Controllers
             return View(mymodel);
         }
 
-        public ActionResult Allrecepts(int? id)
+        public ActionResult Allrecepts(int? id, int? page)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            dynamic mymodel = new ExpandoObject();
-            mymodel.food_cat_id = db.food_categories.Find(id);
-            mymodel.othercategories = db.food_categories.Where(f => f.id != id).ToList();
-            mymodel.receptbycategories = db.foods.Where(f => f.category_id == id).ToList();
-            return View(mymodel);
+           
+            ViewBag.food_cat_id = db.food_categories.Find(id);
+            ViewBag.othercategories = db.food_categories.Where(f => f.id != id).ToList();
+            ViewBag.receptbycategories = db.foods.Where(f => f.category_id == id).ToList();
+
+            int pageNumber = (page ?? 1);
+            ViewBag.receptbycategories = db.foods.OrderBy(o => o.id).Where(c => c.category_id == id).ToPagedList(pageNumber, 5);
+            return View();
         }
     }
 }

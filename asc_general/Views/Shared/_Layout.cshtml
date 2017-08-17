@@ -32,6 +32,7 @@
     @RenderSection("receptCss", false)
     @RenderSection("allComplexCss",false)
     @RenderSection("searchCss",false)
+    @RenderSection("allReceptsCss", false)
     
 
     <link href="~/Public/style.css" rel="stylesheet" type="text/css">
@@ -98,7 +99,7 @@
                                @Html.ActionLink("Cizgi Filmlər", "Index", "Cartoon")
                             </li>
                             <li class="blue @ViewBag.gym">
-                               @Html.ActionLink("Idman", "Index", "gym")
+                               @Html.ActionLink("İdman", "Index", "gym")
                             </li>
                             <li class="steelblue @ViewBag.food">
                                 @Html.ActionLink("Qida", "Index", "Food")
@@ -219,6 +220,8 @@
     @RenderSection("homeJs", false)
     @RenderSection("carouselJS",false)
     @RenderSection("healthJs",false)
+    @RenderSection("receptcarouselJS", false)
+    
 
     <!--Java Scripts--> 
    

@@ -11,6 +11,8 @@
 
     <link rel="stylesheet" href="~/Public/css/food.css">
     <link rel="stylesheet" href="~/Public/css/recept.css">
+<link rel="stylesheet" href="~/Public/owlcarousel/owlCss/owl.carousel.min.css">
+<link rel="stylesheet" href="~/Public/owlcarousel/owlCss/owl.theme.default.min.css">
 
 }
 
@@ -43,18 +45,6 @@
                         </div>
                     </article>
 
-                    <div class="text-center prevnext">
-                        @if (Model.prev != null)
-                        {
-
-                            <a href="@Url.Action("index","recepts",new { id = Model.prev.id })"><i class="fa fa-angle-double-left" aria-hidden="true"></i>Öncə</a>
-                        }
-                        @if (Model.next != null)
-                        {
-
-                            <a href="@Url.Action("index","recepts",new { id = Model.next.id })">Sonra <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
-                        }
-                    </div>
 
                     <!-- End Article -->
                 </div>
@@ -72,7 +62,7 @@
                             @foreach (food_categories f in Model.categories)
                             {
                                 <li>
-                                    <a href="@Url.Action("index","recepts",new { id = f.id })"><h3>@f.category_name</h3> <p> (@f.foods.Count) </p> </a>
+                                    <a href="@Url.Action("allrecepts","recepts",new { id = f.id })"><h3>@f.category_name</h3> <p> (@f.foods.Count) </p> </a>
                                 </li>
                             }
                         </ul>
@@ -88,7 +78,7 @@
 </div>
 
 <!-- Start owl carousel -->
-<div class="slider">
+<div style="margin-bottom:80px;" class="slider">
     <div class="container">
                 <h2>Digər Reseptlər</h2>
         <div class="row">
@@ -97,7 +87,7 @@
                     @foreach (food foooood in Model.allrecepts)
                     {
                         <div class="item">
-                            <a href=@Url.Action("index", "Recepts", new { id = foooood.id , categoryID = foooood.category_id })>
+                            <a href=@Url.Action("index", "recepts", new { id = foooood.id , categoryID = foooood.category_id })>
                                
                                      <img src="~/Uploads/@foooood.photo" alt="@foooood.name" class="activeInCarousel" />
                             </a>
@@ -108,9 +98,19 @@
         </div>
     </div>
 </div>
+<div id="fb-root"></div>
+<script>
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
 <!-- End owl carousel -->
 
-@section carouselJS{
+@section receptcarouselJS{
     <script src="~/Public/owlcarousel/owlJs/jquery.min.js"></script>
     <script src="~/Public/owlcarousel/owlJs/owl.carousel.js"></script>
     <script>
@@ -136,4 +136,4 @@
 
         });
     </script>
-
+    }

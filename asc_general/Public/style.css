@@ -294,33 +294,53 @@ header ul.dt-sc-social-icons li a.gplus span{border-color:#d53e2b; background:#d
 
 #main-menu > ul.menu > li.current_page_item.red > a, #main-menu > ul.menu > li.red > a:hover, #main-menu > ul > li.red:hover > a{color:#f27b81;}
 
-#main-menu > ul.menu > li.mustard > a{border-color:#f7c44e;}
+    #main-menu > ul.menu > li.mustard > a {
+        border-color: #ea79b6;
+    }
 
-#main-menu > ul.menu > li.current_page_item.mustard > a, #main-menu > ul.menu > li.mustard > a:hover, #main-menu > ul > li.mustard:hover > a{color:#f7c44e;}
+        #main-menu > ul.menu > li.current_page_item.mustard > a, #main-menu > ul.menu > li.mustard > a:hover, #main-menu > ul > li.mustard:hover > a {
+            color: #ea79b6;
+        }
 
 #main-menu > ul.menu > li.green > a{border-color:#aec158;}
 
 #main-menu > ul.menu > li.current_page_item.green > a, #main-menu > ul.menu > li.green > a:hover, #main-menu > ul > li.green:hover > a{color:#aec158;}
 
-#main-menu > ul.menu > li.yellow > a{border-color:#fce480;}
+    #main-menu > ul.menu > li.yellow > a {
+        border-color: #8c097b;
+    }
 
-#main-menu > ul.menu > li.current_page_item.yellow > a, #main-menu > ul.menu > li.yellow > a:hover, #main-menu > ul > li.yellow:hover > a{color:#fce480;}
+        #main-menu > ul.menu > li.current_page_item.yellow > a, #main-menu > ul.menu > li.yellow > a:hover, #main-menu > ul > li.yellow:hover > a {
+            color: #8c097b;
+        }
 
 #main-menu > ul.menu > li.blue > a{border-color:#4cbcd4;}
 
 #main-menu > ul.menu > li.current_page_item.blue > a, #main-menu > ul.menu > li.blue > a:hover, #main-menu > ul > li.blue:hover > a{color:#4cbcd4;}
 
-#main-menu > ul.menu > li.steelblue > a{border-color:#4c7297;}
+    #main-menu > ul.menu > li.steelblue > a {
+        border-color: #f32a2a;
+    }
 
-#main-menu > ul.menu > li.current_page_item.steelblue > a, #main-menu > ul.menu > li.steelblue > a:hover, #main-menu > ul > li.steelblue:hover > a{color:#4c7297;}
+        #main-menu > ul.menu > li.current_page_item.steelblue > a, #main-menu > ul.menu > li.steelblue > a:hover, #main-menu > ul > li.steelblue:hover > a {
+            color: #f32a2a;
+        }
 
-#main-menu > ul.menu > li.purple > a{border-color:#dd72b3;}
+    #main-menu > ul.menu > li.purple > a {
+        border-color: #74a534;
+    }
 
-#main-menu > ul.menu > li.current_page_item.purple > a, #main-menu > ul.menu > li.purple > a:hover, #main-menu > ul > li.purple:hover > a{color:#dd72b3;}
+        #main-menu > ul.menu > li.current_page_item.purple > a, #main-menu > ul.menu > li.purple > a:hover, #main-menu > ul > li.purple:hover > a {
+            color: #74a534;
+        }
 
-#main-menu > ul.menu > li.lavender > a{border-color:#b0b6fb;}
+    #main-menu > ul.menu > li.lavender > a {
+        border-color: #ffce72;
+    }
 
-#main-menu > ul.menu > li.current_page_item.lavender > a, #main-menu > ul.menu > li.lavender > a:hover, #main-menu > ul > li.lavender:hover > a{color:#b0b6fb;}
+        #main-menu > ul.menu > li.current_page_item.lavender > a, #main-menu > ul.menu > li.lavender > a:hover, #main-menu > ul > li.lavender:hover > a {
+            color: #ffce72;
+        }
 
 #main-menu > ul.menu > li.pink > a{border-color:#fcc6e6;}
 
@@ -1509,30 +1529,30 @@ footer aside h3 {
     color: #646a82;
 }
 #menu-main-menu li:nth-child(1).active a {
-    color: #f27b81 !important;
+    color: #ea8430 !important;
 }
 #menu-main-menu li:nth-child(2).active a {
-    color: #f7c44e;
+    color: #ea79b6;
 }
 #menu-main-menu li:nth-child(3).active a {
-    color: #fce480;
+    color: #8c097b;
 }
 #menu-main-menu li:nth-child(4).active a {
     color: #4cbcd4;
 }
 
 #menu-main-menu li:nth-child(5).active a {
-    color: #4c7297;
+    color: #f32a2a;
 }
 
 #menu-main-menu li:nth-child(6).active a {
-    color: #b0b6fb;
+    color: #ffce72;
 }
 #menu-main-menu li:nth-child(7).active a {
-    color: #dd72b3;
+    color: #74a534;
 }
 .current_page_item a {
-    border-color: #f27b81 !important;
+    border-color: #ea8430 !important;
 }
 
 @media only screen and (min-width: 768px) {

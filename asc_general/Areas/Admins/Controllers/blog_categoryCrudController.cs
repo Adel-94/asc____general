@@ -16,7 +16,8 @@ namespace asc_general.Areas.Admins.Controllers
 
         // GET: blog_categoryCrud
         public ActionResult Index()
-        {
+        {   
+
             return View(db.blog_category.ToList());
         }
 

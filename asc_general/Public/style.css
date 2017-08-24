@@ -190,7 +190,17 @@ footer .widget.widget_text ul li:before, .portfolio-detail p:before, h5.dt-sc-to
 
 .is-sticky header ul.dt-sc-social-icons li a span{height:55px; line-height:50px;}
 
-header{width:100%; float:left; margin:0px; padding:0px;background:  -webkit-linear-gradient(left,#f7c1c1,#ffcd71,#ffff9d,#c4f9c4,rgba(155, 155, 234, 0.79),#b882de,rgb(251, 107, 251)); display:block; z-index:9999;}
+header {
+    width: 100%;
+    float: left;
+    margin: 0px;
+    padding: 0px;
+    background: -webkit-linear-gradient(left,#f7c1c1,#ffcd71,#ffff9d,#c4f9c4,rgba(155, 155, 234, 0.79),#b882de,rgb(251, 107, 251));
+    display: block;
+    z-index: 9999;
+}
+
+
 
 .is-sticky header #menu-container{height:auto;}
 

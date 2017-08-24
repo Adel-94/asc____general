@@ -30,15 +30,15 @@ namespace asc_general.Areas.Admins.Controllers
             {
                 if (photo.ContentType == "image/jpeg" || photo.ContentType == "image/png" || photo.ContentType == "image/gif")
                 {
-                    WebImage img = new WebImage(photo.InputStream);
+                    //WebImage img = new WebImage(photo.InputStream);
               
                     DateTime now = DateTime.Now;
                     string fileName = now.ToString("yyyyMdHms") + Path.GetFileName(photo.FileName);
                     string path = Path.Combine(Server.MapPath("~/Uploads"), fileName);
                     photo.SaveAs(path);
-                    if (img.Width > 1000)
-                        img.Resize(500, 500);
-                    img.Save(path);
+                    //if (img.Width > 1000)
+                    //    img.Resize(500, 500);
+                    //img.Save(path);
                     food.photo = fileName;
                     db.foods.Add(food);
                     db.SaveChanges();

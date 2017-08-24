@@ -661,6 +661,7 @@
     <Content Include="Public\images\mypics\baby-footprint-heart.png" />
     <Content Include="Public\images\mypics\baby-fussabdruck-herz.png" />
     <Content Include="Public\images\mypics\baby-girl.png" />
+    <Content Include="Public\images\mypics\baby-hands.png" />
     <Content Include="Public\images\mypics\baby.jpg" />
     <Content Include="Public\images\mypics\baby1.jpg" />
     <Content Include="Public\images\mypics\baby1.png" />
@@ -669,7 +670,9 @@
     <Content Include="Public\images\mypics\baloon1.jpg" />
     <Content Include="Public\images\mypics\baloon2.png" />
     <Content Include="Public\images\mypics\bg2.png" />
+    <Content Include="Public\images\mypics\bg5.jpg" />
     <Content Include="Public\images\mypics\board.jpg" />
+    <Content Include="Public\images\mypics\body-pattern.jpg" />
     <Content Include="Public\images\mypics\boy-footprint.png" />
     <Content Include="Public\images\mypics\boy.png" />
     <Content Include="Public\images\mypics\boyf.png" />
@@ -686,7 +689,9 @@
     <Content Include="Public\images\mypics\dc5.jpg" />
     <Content Include="Public\images\mypics\dc6.jpg" />
     <Content Include="Public\images\mypics\dots.jpg" />
+    <Content Include="Public\images\mypics\headerbg.jpg" />
     <Content Include="Public\images\mypics\ideas.jpg" />
+    <Content Include="Public\images\mypics\loginbg.jpg" />
     <Content Include="Public\images\mypics\logoKorpem.png" />
     <Content Include="Public\images\mypics\mother-baby.jpg" />
     <Content Include="Public\images\mypics\star.jpg" />

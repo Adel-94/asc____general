@@ -8,7 +8,8 @@ using System.Dynamic;
 using System.Net;
 
 namespace asc_general.Areas.Admins.Controllers
-{
+{  
+   
     public class adminController : Controller
     {
         private DbAscEntities db = new DbAscEntities();
